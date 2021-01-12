@@ -1,24 +1,34 @@
-<ion-tabs>
+<ion-tabs #tabs (ionTabsDidChange)="selectedTab = tabs.getSelected()">
     <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab1">
-            <ion-icon name="triangle"></ion-icon>
-            <ion-label>Tab 1</ion-label>
+        <ion-tab-button tab="my-plan">
+            <img src="../../../assets/icon/plan-icon.svg" alt="">
+            <ion-label *ngIf="isIos() || isSelected('my-plan')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
+                My Plan
+            </ion-label>
         </ion-tab-button>
-        <ion-tab-button tab="tab2">
-            <ion-icon name="ellipse"></ion-icon>
-            <ion-label>Tab 2</ion-label>
+        <ion-tab-button tab="plans">
+            <img src="../../../assets/icon/calendar-icon.svg" alt="">
+            <ion-label *ngIf="isIos() || isSelected('plans')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
+                Plans
+            </ion-label>
         </ion-tab-button>
-        <ion-tab-button tab="tab3">
-            <ion-icon name="square"></ion-icon>
-            <ion-label>Tab 3</ion-label>
+        <ion-tab-button tab="workouts">
+            <img src="../../../assets/icon/dumbbell-icon.svg" alt="">
+            <ion-label *ngIf="isIos() || isSelected('workouts')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
+                Workouts
+            </ion-label>
         </ion-tab-button>
-        <ion-tab-button tab="tab4">
-            <ion-icon name="square"></ion-icon>
-            <ion-label>Tab 4</ion-label>
+        <ion-tab-button tab="exercises">
+            <img src="../../../assets/icon/list-icon.svg" alt="">
+            <ion-label *ngIf="isIos() || isSelected('exercises')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
+                Exercises
+            </ion-label>
         </ion-tab-button>
-        <ion-tab-button tab="tab5">
-            <ion-icon name="square"></ion-icon>
-            <ion-label>Tab 5</ion-label>
+        <ion-tab-button tab="profile">
+            <img src="../../../assets/icon/profile-icon.svg" alt="">
+            <ion-label *ngIf="isIos() || isSelected('profile')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
+                Profile
+            </ion-label>
         </ion-tab-button>
     </ion-tab-bar>
 </ion-tabs>

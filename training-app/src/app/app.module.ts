@@ -16,6 +16,7 @@ import {TabsComponent} from './components/tabs/tabs.component';
 import {AppPageRoutingModule} from './app-routing.module';
 import {Tab4Page} from './pages/tab4/tab4.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
@@ -24,7 +25,8 @@ import {Tab5Page} from './pages/tab5/tab5.page';
         IonicModule,
         CommonModule,
         FormsModule,
-        AppPageRoutingModule
+        AppPageRoutingModule,
+        BrowserAnimationsModule
     ],
     declarations: [
         AppComponent,
