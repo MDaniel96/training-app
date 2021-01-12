@@ -13,23 +13,23 @@ const routes: Routes = [
         component: TabsComponent,
         children: [
             {
-                path: 'tab1',
+                path: 'my-plan',
                 component: Tab1Page
             },
             {
-                path: 'tab2',
+                path: 'plans',
                 component: Tab2Page
             },
             {
-                path: 'tab3',
+                path: 'workouts',
                 component: Tab3Page
             },
             {
-                path: 'tab4',
+                path: 'exercises',
                 component: Tab4Page
             },
             {
-                path: 'tab5',
+                path: 'profile',
                 component: Tab5Page
             },
             {
@@ -41,7 +41,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/my-plan',
         pathMatch: 'full'
     }
 ];
