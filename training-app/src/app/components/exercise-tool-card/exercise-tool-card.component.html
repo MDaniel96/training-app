@@ -1,0 +1,8 @@
+<ion-card [ngClass]="isIos() ? 'no-ripple' : ''"
+          class="ion-activatable ripple-parent">
+    <img [src]="imageUrl" alt="">
+    <ion-card-header>
+        <ion-card-title>{{ title }}</ion-card-title>
+    </ion-card-header>
+    <ion-ripple-effect></ion-ripple-effect>
+</ion-card>

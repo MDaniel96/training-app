@@ -1,0 +1,51 @@
+<ion-header [mode]="'md'" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+        <ion-icon name="options-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>TRAINING APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col>
+      <app-exercise-tool-card
+              title="Bodyweight"
+              imageUrl="./assets/image/bodyweight-img.jpg"
+      ></app-exercise-tool-card>
+    </ion-col>
+    <ion-col>
+      <app-exercise-tool-card
+              title="Gym"
+              imageUrl="./assets/image/gym-img.jpg"
+      ></app-exercise-tool-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <app-exercise-tool-card
+              title="Street workout"
+              imageUrl="./assets/image/streetworkout-img.jpg"
+      ></app-exercise-tool-card>
+    </ion-col>
+    <ion-col>
+      <ion-card [ngClass]="isIos() ? 'no-ripple' : ''"
+              class="ion-activatable ripple-parent">
+        <div class="more-tools-background">
+          <div><ion-icon name="add-outline"></ion-icon></div>
+          <img src="./assets/image/more-tools-img.jpg" alt=""/>
+        </div>
+        <ion-card-header>
+          <ion-card-title>Add exercise</ion-card-title>
+        </ion-card-header>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
