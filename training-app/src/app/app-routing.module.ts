@@ -4,7 +4,7 @@ import {TabsComponent} from './components/tabs/tabs.component';
 import {Tab1Page} from './pages/tab1/tab1.page';
 import {Tab2Page} from './pages/tab2/tab2.page';
 import {Tab3Page} from './pages/tab3/tab3.page';
-import {Tab4Page} from './pages/tab4/tab4.page';
+import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
 
 const routes: Routes = [
@@ -26,7 +26,7 @@ const routes: Routes = [
             },
             {
                 path: 'exercises',
-                component: Tab4Page
+                component: ExercisePage
             },
             {
                 path: 'profile',

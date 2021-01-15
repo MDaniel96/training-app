@@ -14,9 +14,10 @@ import {Tab2Page} from './pages/tab2/tab2.page';
 import {Tab3Page} from './pages/tab3/tab3.page';
 import {TabsComponent} from './components/tabs/tabs.component';
 import {AppPageRoutingModule} from './app-routing.module';
-import {Tab4Page} from './pages/tab4/tab4.page';
+import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {ExerciseToolCardComponent} from './components/exercise-tool-card/exercise-tool-card.component';
 
 @NgModule({
     imports: [
@@ -31,10 +32,11 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     declarations: [
         AppComponent,
         TabsComponent,
+        ExerciseToolCardComponent,
         Tab1Page,
         Tab2Page,
         Tab3Page,
-        Tab4Page,
+        ExercisePage,
         Tab5Page
     ],
     providers: [
