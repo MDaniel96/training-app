@@ -6,6 +6,7 @@ import {Tab2Page} from './pages/tab2/tab2.page';
 import {Tab3Page} from './pages/tab3/tab3.page';
 import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
+import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
 
 const routes: Routes = [
     {
@@ -26,7 +27,16 @@ const routes: Routes = [
             },
             {
                 path: 'exercises',
-                component: ExercisePage
+                children: [
+                    {
+                        path: '',
+                        component: ExercisePage
+                    },
+                    {
+                        path: 'gym',
+                        component: ExerciseListPage
+                    }
+                ]
             },
             {
                 path: 'profile',

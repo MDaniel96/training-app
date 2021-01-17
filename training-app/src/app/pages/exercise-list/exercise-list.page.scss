@@ -1,0 +1,74 @@
+ion-toolbar.segment {
+  height: var(--segment-height-45);
+
+  ion-segment {
+    height: var(--segment-height-45);
+
+    ion-segment-button {
+      height: var(--segment-height-45);
+      min-height: var(--segment-height-45);
+      border-radius: var(--border-radius-8);
+
+      ion-label {
+        font-weight: var(--font-weight-medium);
+      }
+    }
+  }
+}
+
+.no-ripple {
+  --ripple-color: transparent;
+}
+
+ion-list-header {
+  ion-label {
+    margin-top: 10px;
+    margin-left: 8px;
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+ion-list {
+  border-radius: var(--border-radius-4);
+  margin: 0 12px 0 12px;
+}
+
+@media (prefers-color-scheme: light) {
+  ion-title {
+    color: black;
+  }
+
+  ion-segment-button {
+    --background-checked: var(--trx-yellow-100);
+    --color-checked: none;
+
+    ion-label {
+      color: black;
+    }
+  }
+
+  ion-list {
+    background-color: var(--trx-black-10);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  ion-title {
+    color: white;
+  }
+
+  ion-segment-button {
+    --color: white;
+    --color-checked: var(--trx-yellow-100);
+  }
+
+  ion-list-header {
+    ion-label {
+      color: var(--trx-yellow-100);
+    }
+  }
+
+  ion-list {
+    background-color: var(--white-6);
+  }
+}

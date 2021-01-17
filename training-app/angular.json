@@ -36,7 +36,10 @@
                 "input": "src/theme/variables.scss"
               },
               {
-                "input": "src/theme/custom.scss"
+                "input": "src/theme/values.scss"
+              },
+              {
+                "input": "src/theme/colors.scss"
               },
               {
                 "input": "src/global.scss"
