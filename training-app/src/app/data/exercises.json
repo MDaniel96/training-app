@@ -1,0 +1,73 @@
+[
+  {
+    "name": "Ab Rollups",
+    "image": "exercise-img-1.png",
+    "muscleGroup": [
+      "ABS",
+      "SHOULDER"
+    ],
+    "equipments": [
+      "PULL_UP_BAR"
+    ]
+  },
+  {
+    "name": "Bicycle Crunches",
+    "image": "exercise-img-2.png",
+    "muscleGroup": [
+      "ABS"
+    ],
+    "equipments": [
+      "NO_EQUIPMENT"
+    ]
+  },
+  {
+    "name": "Abdominal Hip Raises",
+    "image": "exercise-img-3.png",
+    "muscleGroup": [
+      "ABS"
+    ],
+    "equipments": [
+      "NO_EQUIPMENT"
+    ]
+  },
+  {
+    "name": "Narrow Push Ups",
+    "image": "exercise-img-4.png",
+    "muscleGroup": [
+      "ABS"
+    ],
+    "equipments": [
+      "NO_EQUIPMENT"
+    ]
+  },
+  {
+    "name": "Kneeled Push Ups",
+    "image": "exercise-img-5.png",
+    "muscleGroup": [
+      "ABS"
+    ],
+    "equipments": [
+      "NO_EQUIPMENT"
+    ]
+  },
+  {
+    "name": "Crunches",
+    "image": "exercise-img-6.png",
+    "muscleGroup": [
+      "ABS"
+    ],
+    "equipments": [
+      "NO_EQUIPMENT"
+    ]
+  },
+  {
+    "name": "Crunches",
+    "image": "exercise-img-6.png",
+    "muscleGroup": [
+      "ABS"
+    ],
+    "equipments": [
+      "NO_EQUIPMENT"
+    ]
+  }
+]

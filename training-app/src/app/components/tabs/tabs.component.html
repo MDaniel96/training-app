@@ -1,31 +1,31 @@
 <ion-tabs #tabs (ionTabsDidChange)="selectedTab = tabs.getSelected()">
     <ion-tab-bar slot="bottom">
         <ion-tab-button tab="my-plan">
-            <img src="../../../assets/icon/plan-icon.svg" alt="">
+            <img src="./assets/icon/plan-icon.svg" alt="">
             <ion-label *ngIf="isIos() || isSelected('my-plan')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
                 My Plan
             </ion-label>
         </ion-tab-button>
         <ion-tab-button tab="plans">
-            <img src="../../../assets/icon/calendar-icon.svg" alt="">
+            <img src="./assets/icon/calendar-icon.svg" alt="">
             <ion-label *ngIf="isIos() || isSelected('plans')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
                 Plans
             </ion-label>
         </ion-tab-button>
         <ion-tab-button tab="workouts">
-            <img src="../../../assets/icon/dumbbell-icon.svg" alt="">
+            <img src="./assets/icon/dumbbell-icon.svg" alt="">
             <ion-label *ngIf="isIos() || isSelected('workouts')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
                 Workouts
             </ion-label>
         </ion-tab-button>
         <ion-tab-button tab="exercises">
-            <img src="../../../assets/icon/list-icon.svg" alt="">
+            <img src="./assets/icon/list-icon.svg" alt="">
             <ion-label *ngIf="isIos() || isSelected('exercises')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
                 Exercises
             </ion-label>
         </ion-tab-button>
         <ion-tab-button tab="profile">
-            <img src="../../../assets/icon/profile-icon.svg" alt="">
+            <img src="./assets/icon/profile-icon.svg" alt="">
             <ion-label *ngIf="isIos() || isSelected('profile')" [@fold] [ngClass]="isIos() ? 'ios-font' : ''">
                 Profile
             </ion-label>

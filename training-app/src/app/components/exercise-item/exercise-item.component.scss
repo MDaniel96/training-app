@@ -1,0 +1,32 @@
+ion-item {
+  --padding-start: 8px;
+  --ion-background-color: var(--transparent);
+
+  div {
+    width: 30%;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-inline-end: 20px;
+
+    img {
+      border-radius: var(--border-radius-4);
+    }
+  }
+
+  ion-label {
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  ion-item {
+    --border-color: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  ion-item {
+    --background: var(--transparent);
+    --border-color: var(--white-25);
+  }
+}

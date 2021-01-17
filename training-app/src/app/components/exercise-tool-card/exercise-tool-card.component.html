@@ -1,4 +1,5 @@
 <ion-card [ngClass]="isIos() ? 'no-ripple' : ''"
+          (click)="selectTool()"
           class="ion-activatable ripple-parent">
     <img [src]="imageUrl" alt="">
     <ion-card-header>
