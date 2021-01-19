@@ -1,0 +1,54 @@
+.exercise-detail-modal .modal-wrapper {
+  position: absolute;
+  height: 65%;
+  top: 35%;
+  width: 100%;
+  border-top-left-radius: var(--border-radius-8);
+  border-top-right-radius: var(--border-radius-8);
+  background-color: var(--lighter-gray-100);
+
+  .ion-page {
+    display: block;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .exercise-detail-modal .modal-wrapper {
+    height: 75%;
+    top: 25%;
+  }
+}
+
+.modal-shadow {
+  display: none;
+}
+
+.sc-ion-modal-ios-h:first-of-type {
+  --backdrop-opacity: var(--ion-backdrop-opacity, 0.6);
+}
+
+.swiper-pagination-bullet {
+  border: 2px solid var(--trx-black-100);
+}
+
+.swiper-pagination {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 1px;
+}
+
+.backdrop-no-scroll {
+  ion-content {
+    --overflow: hidden;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .exercise-detail-modal .modal-wrapper {
+    background-color: var(--trx-black-100);
+  }
+
+  .swiper-pagination-bullet {
+    border: 2px solid var(--trx-yellow-100);
+  }
+}

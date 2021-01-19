@@ -1,6 +1,6 @@
-<ion-item button detail="false">
+<ion-item button detail="false" (click)="selectExercise()">
     <div slot="start">
-        <img src="./assets/images/{{ exercise.image }}" alt="">
+        <img src="./assets/image/exercises/{{ exercise.image }}" alt="">
     </div>
     <ion-label>{{ exercise.name }}</ion-label>
 </ion-item>

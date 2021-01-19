@@ -1,17 +1,25 @@
 :root {
 
   --light-gray-100: #615F5F;
+  --lighter-gray-100: #C4C4C4;
 
   --trx-yellow-100: #FFE41F;
   --trx-yellow-90: rgba(255, 228, 31, 0.90);
+  --trx-yellow-75: rgba(255, 228, 31, 0.75);
   --trx-yellow-55: rgba(255, 228, 31, 0.55);
   --trx-yellow-45: rgba(255, 228, 31, 0.45);
 
   --trx-black-100: #373535;
-  --trx-black-10: rgba(0, 4, 22, 0.1);
+  --trx-black-15: rgba(0, 4, 22, 0.15);
+  --trx-black-10: rgba(0, 4, 22, 0.10);
 
+  --white-80: rgba(255, 255, 255, 0.80);
+  --white-60: rgba(255, 255, 255, 0.60);
+  --white-45: rgba(255, 255, 255, 0.45);
   --white-25: rgba(255, 255, 255, 0.25);
+  --white-20: rgba(255, 255, 255, 0.20);
   --white-6: rgba(255, 255, 255, 0.06);
+  --white-4: rgba(255, 255, 255, 0.04);
 
   --transparent: rgba(0, 0, 0, 0);
 }
