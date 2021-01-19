@@ -1,6 +1,7 @@
 ion-item {
   --padding-start: 8px;
   --ion-background-color: var(--transparent);
+  --border-color: var(--list-item-border-color);
 
   div {
     width: 30%;
@@ -15,18 +16,5 @@ ion-item {
 
   ion-label {
     font-weight: var(--font-weight-medium);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  ion-item {
-    --border-color: white;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  ion-item {
-    --background: var(--transparent);
-    --border-color: var(--white-25);
   }
 }

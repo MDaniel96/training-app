@@ -8,6 +8,9 @@ ion-toolbar.segment {
       height: var(--segment-height-45);
       min-height: var(--segment-height-45);
       border-radius: var(--border-radius-8);
+      --color: var(--segment-button-color);
+      --color-checked: var(--segment-color-checked-color);
+      --background-checked: var(--segment-background-checked-color);
 
       ion-label {
         font-weight: var(--font-weight-medium);
@@ -25,50 +28,18 @@ ion-list-header {
     margin-top: 10px;
     margin-left: 8px;
     font-weight: var(--font-weight-medium);
+    color: var(--list-header-color);
   }
 }
 
 ion-list {
   border-radius: var(--border-radius-4);
   margin: 0 12px 0 12px;
+  background-color: var(--list-background-color);
 }
 
-@media (prefers-color-scheme: light) {
-  ion-title {
-    color: black;
-  }
-
-  ion-segment-button {
-    --background-checked: var(--trx-yellow-100);
-    --color-checked: none;
-
-    ion-label {
-      color: black;
-    }
-  }
-
-  ion-list {
-    background-color: var(--trx-black-10);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  ion-title {
-    color: white;
-  }
-
-  ion-segment-button {
-    --color: white;
-    --color-checked: var(--trx-yellow-100);
-  }
-
-  ion-list-header {
-    ion-label {
-      color: var(--trx-yellow-100);
-    }
-  }
-
-  ion-list {
-    background-color: var(--white-6);
-  }
+// disable segment scrollbar on iOS
+::-webkit-scrollbar, *::-webkit-scrollbar {
+  display: none !important;
+  overflow: hidden !important;
 }

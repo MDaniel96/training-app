@@ -1,8 +1,14 @@
 <ion-header [mode]="'md'" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>tab5</ion-title>
+    <ion-title>Developer options</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item>
+      <ion-icon slot="start" name="moon"></ion-icon>
+      <ion-label>Dark mode</ion-label>
+      <ion-toggle (ionChange)="toggleDarkMode($event)" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
 </ion-content>

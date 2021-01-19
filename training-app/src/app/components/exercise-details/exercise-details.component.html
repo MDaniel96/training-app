@@ -2,7 +2,8 @@
 <div class="wrapper">
     <video [@fadeIn]='state' (loadeddata)="state = 'in'"
            playsinline autoplay muted loop
-           [src]="'./assets/video/' + exercise.video"></video>
+           [src]="'./assets/video/' + exercise.video">
+    </video>
     <ion-slides *ngIf="showSlides" pager="true">
         <ion-slide>
             <div class="details-container overflow">

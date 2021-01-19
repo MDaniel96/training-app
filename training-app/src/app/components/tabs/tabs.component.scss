@@ -1,11 +1,11 @@
 ion-tab-bar {
-  background-color: var(--trx-black-100);
+  background-color: var(--tab-bar-background-color);
   border: 0;
 }
 
 ion-tab-button {
   color: #ffffff;
-  background-color: var(--trx-black-100);
+  background-color: var(--tab-bar-background-color);
   --padding-start: 0px;
   --padding-end: 0px;
 }
@@ -15,7 +15,7 @@ ion-tab-button.tab-selected {
     filter: brightness(0) saturate(100%) invert(95%) sepia(32%) saturate(4304%) hue-rotate(334deg) brightness(103%) contrast(101%);
   }
 
-  --ripple-color: var(--light-gray-100);
+  --ripple-color: var(--tab-selected-ripple-color);
 }
 
 img {
@@ -31,19 +31,4 @@ ion-label {
 
 .ios-font {
   font-size: 11.5px;
-}
-
-@media (prefers-color-scheme: dark) {
-  ion-tab-bar {
-    background-color: var(--light-gray-100);
-  }
-
-  ion-tab-button {
-    color: #ffffff;
-    background-color: var(--light-gray-100);
-  }
-
-  ion-tab-button.tab-selected {
-    --ripple-color: var(--trx-black-100);
-  }
 }

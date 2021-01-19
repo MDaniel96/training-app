@@ -19,7 +19,6 @@ import {Tab5Page} from './pages/tab5/tab5.page';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ExerciseToolCardComponent} from './components/exercise-tool-card/exercise-tool-card.component';
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
-import {ExerciseService} from './service/exercise.service';
 import {ExerciseItemComponent} from './components/exercise-item/exercise-item.component';
 import {ExerciseDetailsComponent} from './components/exercise-details/exercise-details.component';
 
@@ -49,7 +48,6 @@ import {ExerciseDetailsComponent} from './components/exercise-details/exercise-d
     providers: [
         StatusBar,
         SplashScreen,
-        ExerciseService,
         {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
     ],
     entryComponents: [],

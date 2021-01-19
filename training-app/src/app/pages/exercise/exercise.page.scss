@@ -2,19 +2,24 @@ ion-title {
   font-size: 21px;
   font-family: 'Lora', serif;
   font-weight: bold;
+  color: var(--title-color);
 }
 
 ion-button {
   font-size: large;
+  color: var(--button-icon-color);
 }
 
 .more-tools-background {
   position: relative;
+  color: var(--moore-tools-background-color);
+
   div {
     background: var(--trx-yellow-45);
     position: absolute;
     height: 100%;
     width: 100%;
+
     ion-icon {
       position: absolute;
       height: 80%;
@@ -31,32 +36,4 @@ ion-row {
 
 .no-ripple-button {
   --ripple-color: transparent;
-}
-
-@media (prefers-color-scheme: light) {
-  ion-title {
-    color: var(--trx-black-100);
-  }
-
-  ion-button {
-    color: var(--trx-black-100);
-  }
-
-  .more-tools-background {
-    color: white;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  ion-title {
-    color: var(--trx-yellow-100);
-  }
-
-  ion-button {
-    color: var(--trx-yellow-100);
-  }
-
-  .more-tools-background {
-    color: var(--trx-black-100);
-  }
 }
