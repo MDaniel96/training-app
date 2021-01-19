@@ -21,6 +21,7 @@ import {ExerciseToolCardComponent} from './components/exercise-tool-card/exercis
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
 import {ExerciseService} from './service/exercise.service';
 import {ExerciseItemComponent} from './components/exercise-item/exercise-item.component';
+import {ExerciseDetailsComponent} from './components/exercise-details/exercise-details.component';
 
 @NgModule({
     imports: [
@@ -37,6 +38,7 @@ import {ExerciseItemComponent} from './components/exercise-item/exercise-item.co
         TabsComponent,
         ExerciseToolCardComponent,
         ExerciseItemComponent,
+        ExerciseDetailsComponent,
         Tab1Page,
         Tab2Page,
         Tab3Page,
