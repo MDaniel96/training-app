@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {ThemeService} from '../../service/theme.service';
 
 @Component({
-  selector: 'app-tab5',
-  templateUrl: './tab5.page.html',
-  styleUrls: ['./tab5.page.scss'],
+    selector: 'app-tab5',
+    templateUrl: './tab5.page.html',
+    styleUrls: ['./tab5.page.scss'],
 })
-export class Tab5Page implements OnInit {
+export class Tab5Page {
 
-  constructor() { }
+    constructor(private themeService: ThemeService) {
+    }
 
-  ngOnInit() {
-  }
-
+    toggleDarkMode(event) {
+        this.themeService.setTheme(event.detail.checked);
+    }
 }

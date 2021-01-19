@@ -1,9 +1,22 @@
 ion-title {
-    color: var(--trx-black-100);
+  color: var(--title-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  ion-title {
-    color: var(--trx-yellow-100);
+ion-list {
+  border-radius: var(--border-radius-4);
+  margin: 0 12px 0 12px;
+  background-color: var(--list-background-color);
+
+  ion-item {
+    --padding-start: 8px;
+    --ion-background-color: var(--transparent);
+    --border-color: var(--list-item-border-color);
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    ion-toggle {
+      --background-checked: var(--trx-yellow-45);
+      --handle-background-checked: var(--toggle-handle-background-checked-color);
+    }
   }
 }

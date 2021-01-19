@@ -5,7 +5,7 @@ span {
   top: 10px;
   width: 40px;
   height: 3px;
-  background-color: black;
+  background-color: var(--modal-close-line-background-color);
 }
 
 video {
@@ -20,6 +20,7 @@ video {
   bottom: 2%;
   display: flex;
   flex-flow: column;
+  color: var(--ion-text-color);
 }
 
 .details-container {
@@ -32,7 +33,7 @@ video {
   left: 5%;
   padding: 14px;
   border-radius: var(--border-radius-4);
-  background-color: var(--white-60);
+  background-color: var(--modal-detail-container-background-color);
 
   div:first-child {
     flex: 2;
@@ -60,8 +61,8 @@ ion-badge {
   padding: 5.5px 7.5px;
   font-size: 14px;
   border-radius: var(--border-radius-4);
-  color: black;
-  border: 0.5px solid var(--trx-black-15);
+  color: var(--badge-font-color);
+  border: var(--badge-border);
 
   div {
     position: relative;
@@ -73,18 +74,18 @@ ion-badge {
     width: 17px;
     height: 17px;
     margin-left: 15px;
-    filter: invert(1);
+    filter: var(--img-white-to-black-filter);
     position: relative;
     top: 2px;
   }
 }
 
 div.muscles ion-badge {
-  background-color: var(--trx-yellow-100);
+  background-color: var(--badge-muscle-background-color);
 }
 
 div.equipments ion-badge {
-  background-color: var(--white-80);
+  background-color: var(--badge-equipment-background-color);
 }
 
 div.title {
@@ -105,7 +106,7 @@ div.description {
 ion-slides {
   height: 100%;
   width: 100%;
-  --bullet-background-active: var(--trx-black-100);
+  --bullet-background-active: var(--slide-active-bullet-color);
 }
 
 ion-slide {
@@ -115,35 +116,4 @@ ion-slide {
 
 .overflow {
   overflow: auto;
-}
-
-@media (prefers-color-scheme: dark) {
-  span {
-    background-color: var(--trx-yellow-75);
-  }
-
-  .details-container {
-    background-color: var(--white-4);
-  }
-
-  ion-badge {
-    color: white;
-    border: 0;
-
-    img {
-      filter: invert(0);
-    }
-  }
-
-  div.muscles ion-badge {
-    background-color: var(--trx-yellow-45);
-  }
-
-  div.equipments ion-badge {
-    background-color: var(--white-20);
-  }
-
-  ion-slides {
-    --bullet-background-active: var(--trx-yellow-100);
-  }
 }
