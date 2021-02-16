@@ -11,7 +11,7 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {Tab1Page} from './pages/tab1/tab1.page';
 import {Tab2Page} from './pages/tab2/tab2.page';
-import {Tab3Page} from './pages/tab3/tab3.page';
+import {WorkoutPage} from './pages/workout/workout.page';
 import {TabsComponent} from './components/tabs/tabs.component';
 import {AppPageRoutingModule} from './app-routing.module';
 import {ExercisePage} from './pages/exercise/exercise.page';
@@ -21,6 +21,9 @@ import {ExerciseToolCardComponent} from './components/exercise-tool-card/exercis
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
 import {ExerciseItemComponent} from './components/exercise-item/exercise-item.component';
 import {ExerciseDetailsComponent} from './components/exercise-details/exercise-details.component';
+import {WorkoutListComponent} from './components/workout-list/workout-list.component';
+import {WorkoutItemComponent} from './components/workout-item/workout-item.component';
+import {HideHeaderDirective} from './directives/hide-header.directive';
 
 @NgModule({
     imports: [
@@ -38,12 +41,15 @@ import {ExerciseDetailsComponent} from './components/exercise-details/exercise-d
         ExerciseToolCardComponent,
         ExerciseItemComponent,
         ExerciseDetailsComponent,
+        WorkoutListComponent,
+        WorkoutItemComponent,
         Tab1Page,
         Tab2Page,
-        Tab3Page,
+        WorkoutPage,
         ExercisePage,
         ExerciseListPage,
-        Tab5Page
+        Tab5Page,
+        HideHeaderDirective
     ],
     providers: [
         StatusBar,

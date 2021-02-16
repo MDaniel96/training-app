@@ -1,0 +1,35 @@
+ion-card {
+  margin: 0 12px 15.5px 12px;
+  box-shadow: none;
+
+  ion-item {
+    border-radius: var(--border-radius-4);
+    background-color: var(--list-background-color);
+
+    --padding-start: 0px;
+    --ion-background-color: var(--transparent);
+    --border-color: var(--list-item-border-color);
+
+    img {
+      width: 35%;
+      border-radius: var(--border-radius-4) 0 0 var(--border-radius-4);
+      margin: 0 16px 0 0;
+    }
+
+    .duration {
+      font-size: 14.5px;
+      margin-inline-start: 0;
+      font-weight: var(--font-weight-medium);
+    }
+
+    ion-label {
+      font-size: 16px;
+      font-weight: var(--font-weight-medium);
+    }
+
+    .badge {
+      margin-top: 20px;
+      font-size: 11.5px;
+    }
+  }
+}

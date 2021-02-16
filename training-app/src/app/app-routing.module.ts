@@ -3,7 +3,7 @@ import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {TabsComponent} from './components/tabs/tabs.component';
 import {Tab1Page} from './pages/tab1/tab1.page';
 import {Tab2Page} from './pages/tab2/tab2.page';
-import {Tab3Page} from './pages/tab3/tab3.page';
+import {WorkoutPage} from './pages/workout/workout.page';
 import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
@@ -23,7 +23,7 @@ const routes: Routes = [
             },
             {
                 path: 'workouts',
-                component: Tab3Page
+                component: WorkoutPage
             },
             {
                 path: 'exercises',
@@ -51,7 +51,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/tabs/my-plan',
+        redirectTo: '/tabs/workouts',
         pathMatch: 'full'
     }
 ];

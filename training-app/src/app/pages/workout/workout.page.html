@@ -1,0 +1,34 @@
+<ion-content fullscreen [scrollEvents]="true"
+             hide-header [header]="header.el" [subHeader]="stickyHeader.el"> <!-- Fix: ion-slides fullscreen bug -->
+    <ion-header [mode]="'md'" #header slot="fixed" class="main-header">
+        <ion-toolbar>
+            <ion-buttons slot="end">
+                <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+                    <ion-icon name="options-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-title>TRAINING APP</ion-title>
+        </ion-toolbar>
+        <ion-toolbar class="segment-toolbar">
+            <ion-segment [(ngModel)]="selectedExerciseType" [class]="isIos() ? 'no-ripple-button' : ''" scrollable>
+                <ion-segment-button *ngFor="let exerciseType of exerciseTypes" [id]="exerciseType + 'Id'"
+                                    [value]="exerciseType" (click)="slideToExerciseType(exerciseType)">
+                    <ion-label>{{ exerciseType }}</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </ion-toolbar>
+    </ion-header>
+    <ion-header #stickyHeader class="sticky-header ion-no-border" slot="fixed" mode="md">
+        <ion-list-header *ngIf="currentMuscleGroup">
+            <ion-label class="list-label" [@fadeIn]="stickyHeaderAnimState">{{ currentMuscleGroup }}</ion-label>
+        </ion-list-header>
+    </ion-header>
+    <ion-slides #slider (ionSlideWillChange)="beforeExerciseTypeSlide()" (ionSlideDidChange)="onExerciseTypeSlide()"
+                *ngIf="showSlides">
+        <ion-slide *ngFor="let exerciseType of exerciseTypes">
+            <app-workout-list *ngIf="isWorkoutListLoaded(exerciseType)"
+                              (currentMuscleGroup)="currentMuscleGroupChanged($event)"
+            ></app-workout-list>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

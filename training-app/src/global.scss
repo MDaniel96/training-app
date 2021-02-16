@@ -28,3 +28,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 @import "./app/components/exercise-details/exercise-details-modal.scss";
+
+.main-header {
+  ion-title {
+    font-size: 21px;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    color: var(--title-color);
+  }
+
+  ion-button {
+    font-size: large;
+    color: var(--button-icon-color);
+  }
+}
+
+.segment-toolbar {
+  height: var(--segment-height-45);
+
+  ion-segment {
+    height: var(--segment-height-45);
+
+    ion-segment-button {
+      height: var(--segment-height-45);
+      min-height: var(--segment-height-45);
+      border-radius: var(--border-radius-8);
+      --color: var(--segment-button-color);
+      --color-checked: var(--segment-color-checked-color);
+      --background-checked: var(--segment-background-checked-color);
+      text-transform: capitalize;
+
+      ion-label {
+        font-weight: var(--font-weight-medium);
+      }
+    }
+  }
+}
+
+.list-label {
+  text-align: start;
+  margin-top: 10px;
+  margin-left: 8px;
+  font-weight: var(--font-weight-medium);
+  color: var(--list-header-color);
+  text-transform: capitalize;
+}
+
+.no-ripple {
+  color: transparent;
+}
+
+.no-ripple-button {
+  --ripple-color: transparent;
+}
+
+.badge {
+  padding: 5.5px 7.5px;
+  border-radius: var(--border-radius-4);
+  color: var(--badge-font-color);
+  border: var(--badge-border);
+}
+
+.badge-gray {
+  background-color: var(--badge-equipment-background-color);
+}
+
+.badge-yellow {
+  background-color: var(--badge-muscle-background-color);
+}
