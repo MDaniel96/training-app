@@ -1,6 +1,14 @@
-<ion-item button detail="false" (click)="selectExercise()">
+<ion-item *ngIf="exercise.type !== 'REST'"
+          button detail="false" (click)="selectExercise()">
     <div slot="start">
         <img src="./assets/image/exercises/{{ exercise.image }}" alt="">
     </div>
     <ion-label>{{ exercise.name }}</ion-label>
+    <span *ngIf="amount">
+        {{ exercise.amount }} {{ exercise.type === 'REP' ? 'rep' : 's' }}
+    </span>
+</ion-item>
+
+<ion-item *ngIf="exercise.type === 'REST'" lines="none">
+    <ion-label class="rest-label">Rest</ion-label>
 </ion-item>

@@ -5,4 +5,6 @@ export class Exercise {
     muscleGroups: string[];
     equipments: string[];
     description: string;
+    type: string;
+    amount: number;
 }

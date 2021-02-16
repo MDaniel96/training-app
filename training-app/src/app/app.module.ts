@@ -24,6 +24,8 @@ import {ExerciseDetailsComponent} from './components/exercise-details/exercise-d
 import {WorkoutListComponent} from './components/workout-list/workout-list.component';
 import {WorkoutItemComponent} from './components/workout-item/workout-item.component';
 import {HideHeaderDirective} from './directives/hide-header.directive';
+import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
+import {HidenavModule} from 'ionic4-hidenav';
 
 @NgModule({
     imports: [
@@ -33,7 +35,8 @@ import {HideHeaderDirective} from './directives/hide-header.directive';
         CommonModule,
         FormsModule,
         AppPageRoutingModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        HidenavModule
     ],
     declarations: [
         AppComponent,
@@ -46,6 +49,7 @@ import {HideHeaderDirective} from './directives/hide-header.directive';
         Tab1Page,
         Tab2Page,
         WorkoutPage,
+        WorkoutDetailPage,
         ExercisePage,
         ExerciseListPage,
         Tab5Page,

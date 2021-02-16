@@ -12,6 +12,8 @@ export class ExerciseItemComponent {
 
     @Input() exercise: Exercise;
 
+    @Input() amount: boolean;
+
     constructor(private platform: Platform,
                 private modalController: ModalController) {
     }

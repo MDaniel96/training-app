@@ -7,6 +7,7 @@ import {WorkoutPage} from './pages/workout/workout.page';
 import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
+import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
 
 const routes: Routes = [
     {
@@ -48,6 +49,10 @@ const routes: Routes = [
                 pathMatch: 'full'
             }
         ]
+    },
+    {
+        path: 'workout-detail',
+        component: WorkoutDetailPage
     },
     {
         path: '',
