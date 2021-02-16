@@ -3,36 +3,836 @@
     "name": "Complex Core",
     "image": "workout-img-1.png",
     "duration": 38,
-    "type": "STRENGTH"
+    "type": "STRENGTH",
+    "muscleGroups": "Core, Upper Body",
+    "equipments": "Med Ball, Dumbbell, Stretch band",
+    "exercises": [
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Bicycle Crunches",
+        "image": "exercise-img-2.png",
+        "video": "bicycle-crunches.mov",
+        "type": "INTERVAL",
+        "amount": 45,
+        "muscleGroups": [
+          "ABS",
+          "LEG"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 15
+      },
+      {
+        "name": "Abdominal Hip Raises",
+        "image": "exercise-img-3.png",
+        "video": "abdominal-hip-raises.mov",
+        "type": "REP",
+        "amount": 12,
+        "muscleGroups": [
+          "ABS",
+          "BICEPS"
+        ],
+        "equipments": [
+          "DUMBELL",
+          "BARBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Narrow Push Ups",
+        "image": "exercise-img-4.png",
+        "video": "narrow-push-up.mov",
+        "type": "REP",
+        "amount": 20,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 20
+      },
+      {
+        "name": "Kneeled Push Ups",
+        "image": "exercise-img-5.png",
+        "video": "kneeled-push-ups.mov",
+        "type": "INTERVAL",
+        "amount": 40,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT",
+          "DUMBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "REP",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "INTERVAL",
+        "amount": 15,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 75
+      },
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Bicycle Crunches",
+        "image": "exercise-img-2.png",
+        "video": "bicycle-crunches.mov",
+        "type": "INTERVAL",
+        "amount": 45,
+        "muscleGroups": [
+          "ABS",
+          "LEG"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 15
+      },
+      {
+        "name": "Abdominal Hip Raises",
+        "image": "exercise-img-3.png",
+        "video": "abdominal-hip-raises.mov",
+        "type": "REP",
+        "amount": 12,
+        "muscleGroups": [
+          "ABS",
+          "BICEPS"
+        ],
+        "equipments": [
+          "DUMBELL",
+          "BARBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Narrow Push Ups",
+        "image": "exercise-img-4.png",
+        "video": "narrow-push-up.mov",
+        "type": "REP",
+        "amount": 20,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 20
+      },
+      {
+        "name": "Kneeled Push Ups",
+        "image": "exercise-img-5.png",
+        "video": "kneeled-push-ups.mov",
+        "type": "INTERVAL",
+        "amount": 40,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT",
+          "DUMBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "REP",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "INTERVAL",
+        "amount": 15,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      }
+    ]
   },
   {
     "name": "Light Cardio",
     "image": "workout-img-2.png",
     "duration": 27,
-    "type": "CARDIO"
+    "type": "CARDIO",
+    "muscleGroups": "Lower Body, Core",
+    "equipments": "Med Ball, Dumbbell",
+    "exercises": [
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Bicycle Crunches",
+        "image": "exercise-img-2.png",
+        "video": "bicycle-crunches.mov",
+        "type": "INTERVAL",
+        "amount": 45,
+        "muscleGroups": [
+          "ABS",
+          "LEG"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 15
+      },
+      {
+        "name": "Abdominal Hip Raises",
+        "image": "exercise-img-3.png",
+        "video": "abdominal-hip-raises.mov",
+        "type": "REP",
+        "amount": 12,
+        "muscleGroups": [
+          "ABS",
+          "BICEPS"
+        ],
+        "equipments": [
+          "DUMBELL",
+          "BARBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Narrow Push Ups",
+        "image": "exercise-img-4.png",
+        "video": "narrow-push-up.mov",
+        "type": "REP",
+        "amount": 20,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 20
+      },
+      {
+        "name": "Kneeled Push Ups",
+        "image": "exercise-img-5.png",
+        "video": "kneeled-push-ups.mov",
+        "type": "INTERVAL",
+        "amount": 40,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT",
+          "DUMBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "REP",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "INTERVAL",
+        "amount": 15,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 75
+      },
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      }
+    ]
   },
   {
     "name": "Strong Back",
     "image": "workout-img-3.png",
     "duration": 29,
-    "type": "STRENGTH"
+    "type": "STRENGTH",
+    "muscleGroups": "Arm, Upperbody",
+    "equipments": "Pull-Up Bar, Med Ball, Dumbbell, valami meg",
+    "exercises": [
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Bicycle Crunches",
+        "image": "exercise-img-2.png",
+        "video": "bicycle-crunches.mov",
+        "type": "INTERVAL",
+        "amount": 45,
+        "muscleGroups": [
+          "ABS",
+          "LEG"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 15
+      },
+      {
+        "name": "Abdominal Hip Raises",
+        "image": "exercise-img-3.png",
+        "video": "abdominal-hip-raises.mov",
+        "type": "REP",
+        "amount": 12,
+        "muscleGroups": [
+          "ABS",
+          "BICEPS"
+        ],
+        "equipments": [
+          "DUMBELL",
+          "BARBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Narrow Push Ups",
+        "image": "exercise-img-4.png",
+        "video": "narrow-push-up.mov",
+        "type": "REP",
+        "amount": 20,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 20
+      },
+      {
+        "name": "Kneeled Push Ups",
+        "image": "exercise-img-5.png",
+        "video": "kneeled-push-ups.mov",
+        "type": "INTERVAL",
+        "amount": 40,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT",
+          "DUMBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "REP",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "INTERVAL",
+        "amount": 15,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 75
+      },
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      }
+    ]
   },
   {
     "name": "Build Triceps",
     "image": "workout-img-4.png",
     "duration": 25,
-    "type": "STRENGTH"
+    "type": "STRENGTH",
+    "muscleGroups": "Arm",
+    "equipments": "Pull-Up Bar, Med Ball, Dumbbell, valami meg",
+    "exercises": [
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Bicycle Crunches",
+        "image": "exercise-img-2.png",
+        "video": "bicycle-crunches.mov",
+        "type": "INTERVAL",
+        "amount": 45,
+        "muscleGroups": [
+          "ABS",
+          "LEG"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      }
+    ]
   },
   {
     "name": "TRX Power Sets",
     "image": "workout-img-5.png",
     "duration": 40,
-    "type": "STRENGTH"
+    "type": "STRENGTH",
+    "muscleGroups": "Upper Body, Lower Body, Core, Shoulder",
+    "equipments": "Pull-Up Bar, Med Ball",
+    "exercises": [
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Bicycle Crunches",
+        "image": "exercise-img-2.png",
+        "video": "bicycle-crunches.mov",
+        "type": "INTERVAL",
+        "amount": 45,
+        "muscleGroups": [
+          "ABS",
+          "LEG"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 15
+      },
+      {
+        "name": "Abdominal Hip Raises",
+        "image": "exercise-img-3.png",
+        "video": "abdominal-hip-raises.mov",
+        "type": "REP",
+        "amount": 12,
+        "muscleGroups": [
+          "ABS",
+          "BICEPS"
+        ],
+        "equipments": [
+          "DUMBELL",
+          "BARBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Narrow Push Ups",
+        "image": "exercise-img-4.png",
+        "video": "narrow-push-up.mov",
+        "type": "REP",
+        "amount": 20,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 20
+      },
+      {
+        "name": "Kneeled Push Ups",
+        "image": "exercise-img-5.png",
+        "video": "kneeled-push-ups.mov",
+        "type": "INTERVAL",
+        "amount": 40,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT",
+          "DUMBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "REP",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "INTERVAL",
+        "amount": 15,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 75
+      },
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      }
+    ]
   },
   {
     "name": "Epic Gym Day",
     "image": "workout-img-6.png",
     "duration": 37,
-    "type": "CARDIO"
+    "type": "CARDIO",
+    "muscleGroups": "Upper Body, Lower Body, Core, Shoulder",
+    "equipments": "Pull-Up Bar, Med Ball, Dumbbell",
+    "exercises": [
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Bicycle Crunches",
+        "image": "exercise-img-2.png",
+        "video": "bicycle-crunches.mov",
+        "type": "INTERVAL",
+        "amount": 45,
+        "muscleGroups": [
+          "ABS",
+          "LEG"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 15
+      },
+      {
+        "name": "Abdominal Hip Raises",
+        "image": "exercise-img-3.png",
+        "video": "abdominal-hip-raises.mov",
+        "type": "REP",
+        "amount": 12,
+        "muscleGroups": [
+          "ABS",
+          "BICEPS"
+        ],
+        "equipments": [
+          "DUMBELL",
+          "BARBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Narrow Push Ups",
+        "image": "exercise-img-4.png",
+        "video": "narrow-push-up.mov",
+        "type": "REP",
+        "amount": 20,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 20
+      },
+      {
+        "name": "Kneeled Push Ups",
+        "image": "exercise-img-5.png",
+        "video": "kneeled-push-ups.mov",
+        "type": "INTERVAL",
+        "amount": 40,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT",
+          "DUMBELL"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "REP",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "name": "Crunches",
+        "image": "exercise-img-6.png",
+        "video": "crunches.mov",
+        "type": "INTERVAL",
+        "amount": 15,
+        "muscleGroups": [
+          "ABS"
+        ],
+        "equipments": [
+          "NO_EQUIPMENT"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      },
+      {
+        "type": "REST",
+        "amount": 75
+      },
+      {
+        "name": "Ab Rollups",
+        "image": "exercise-img-1.png",
+        "video": "ab-rollups.mov",
+        "type": "INTERVAL",
+        "amount": 30,
+        "muscleGroups": [
+          "ABS",
+          "SHOULDER"
+        ],
+        "equipments": [
+          "PULL_UP_BAR"
+        ],
+        "description": "A push-up (or press-up in British English) is a common calisthenics exercise beginning from the prone position. By raising and lowering the body using the arms, push-ups exercise the pectoral muscles, triceps, and anterior deltoids, with ancillary benefits to the rest of."
+      }
+    ]
   }
 ]

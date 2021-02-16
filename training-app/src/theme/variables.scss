@@ -40,6 +40,8 @@
 
   --slide-active-bullet-color: var(--trx-black-100);
   --slide-bullett-border: 2px solid var(--trx-black-100);
+
+  --workout-info-card-background: var(--trx-black-8);
 }
 
 /** Night mode **/
@@ -83,6 +85,8 @@ body.dark {
 
   --slide-active-bullet-color: var(--trx-yellow-100);
   --slide-bullett-border: 2px solid var(--trx-yellow-100);
+
+  --workout-info-card-background: var(--white-8);
 }
 
 /** Only Android **/

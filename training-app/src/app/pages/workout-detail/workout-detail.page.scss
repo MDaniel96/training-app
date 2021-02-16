@@ -1,0 +1,116 @@
+.image-container {
+  height: 30vh;
+
+  img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: 0 5%;
+  }
+
+  .backdrop {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black-40);
+  }
+}
+
+.title {
+  position: relative;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+
+  span {
+    display: inline-block;
+  }
+}
+
+ion-toolbar {
+  --background: var(--transparent);
+  color: white;
+  height: 20vh;
+}
+
+ion-header {
+  width: 100vw;
+  height: 30vh;
+}
+
+hidenav-stretchheader {
+  color: white;
+}
+
+ion-icon {
+  font-size: 26px;
+}
+
+ion-row {
+  text-align: center;
+}
+
+ion-col {
+  padding: 10px 5px;
+
+  div.card {
+    background-color: var(--workout-info-card-background);
+    border-radius: var(--border-radius-10);
+    padding: 10px;
+    text-align: center;
+    height: 75px;
+
+    .title {
+      font-weight: var(--font-weight-bold);
+      font-size: 13px;
+      color: var(--list-header-color);
+      letter-spacing: 0.1px;
+      padding-bottom: 10px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .content {
+      font-size: 13px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+}
+
+ion-list {
+  border-radius: var(--border-radius-4);
+  background-color: var(--list-background-color);
+  margin: 0 12px 12px;
+}
+
+ion-footer {
+  text-align: center;
+  bottom: 6.5px;
+  border-color: transparent;
+}
+
+ion-button.start {
+  --border-radius: var(--border-radius-40);
+  --background: var(--trx-yellow-97);
+  --background-activated: var(--trx-yellow-100);
+  color: black;
+  font-weight: var(--font-weight-bold);
+  font-size: 15px;
+  letter-spacing: 1.2px;
+  height: 55px;
+  width: 80vw;
+  text-transform: capitalize;
+}
+
+@media only screen and (min-width: 600px) {
+  ion-button.start {
+    width: 50vw;
+  }
+}

@@ -1,0 +1,59 @@
+<ion-header [mode]="'md'" class="ion-no-border">
+    <hidenav-stretchheader (scroll)="resizeTitle($event)" header-height="96" init-expanded="true" no-border="true">
+        <div #static style="width: 100%;">
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-back-button [icon]="isIos() ? 'chevron-back-outline' : 'arrow-back-outline'">
+                    </ion-back-button>
+                </ion-buttons>
+                <ion-buttons slot="end">
+                    <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+                        <ion-icon name="headset"></ion-icon>
+                    </ion-button>
+                </ion-buttons>
+                <div class="title"><span #title>{{workout.name}}</span></div>
+            </ion-toolbar>
+        </div>
+        <div #shrinkexpand>
+            <div class="image-container">
+                <img [src]="'./assets/image/workouts/' + workout.image" alt="workout">
+                <div class="backdrop"></div>
+            </div>
+        </div>
+    </hidenav-stretchheader>
+</ion-header>
+<ion-content hidenav-sh-content fullscreen>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3">
+                <div class="card">
+                    <div class="title">Duration</div>
+                    <div class="content">{{workout.duration}} min</div>
+                </div>
+            </ion-col>
+            <ion-col size="4.5">
+                <div class="card">
+                    <div class="title">Muscle group</div>
+                    <div class="content">{{workout.muscleGroups}}</div>
+                </div>
+            </ion-col>
+            <ion-col size="4.5">
+                <div class="card">
+                    <div class="title">Equipment</div>
+                    <div class="content">{{workout.equipments}}</div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-list>
+        <app-exercise-item *ngFor="let exercise of workout.exercises"
+                           [exercise]="exercise"
+                           [amount]="true"
+        ></app-exercise-item>
+    </ion-list>
+</ion-content>
+<ion-footer class="ion-no-border">
+    <div>
+        <ion-button class="start">Start Workout</ion-button>
+    </div>
+</ion-footer>
