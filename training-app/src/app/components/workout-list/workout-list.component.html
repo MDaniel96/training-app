@@ -1,0 +1,11 @@
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onWorkoutsScroll($event)">
+    <br><br><br><br><br> <!-- Fix: ion-slides fullscreen bug -->
+    <div *ngFor="let muscleGroup of muscleGroups">
+        <ion-list-header mode="md" [id]="muscleGroup + 'WoId'">
+            <ion-label class="list-label">{{ muscleGroup }}</ion-label>
+        </ion-list-header>
+        <ion-list lines="none">
+            <app-workout-item *ngFor="let workout of workouts" [workout]="workout"></app-workout-item>
+        </ion-list>
+    </div>
+</ion-content>

@@ -15,7 +15,7 @@ export class ExerciseDetailsComponent implements AfterViewInit {
     showSlides = false;
     state = 'out';
 
-    // fix slide bug on second modal open
+    // fix slider bug
     ngAfterViewInit(): void {
         setTimeout(() => {
             this.showSlides = true;

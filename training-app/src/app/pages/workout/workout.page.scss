@@ -1,0 +1,29 @@
+ion-slides {
+  height: 100%;
+
+  ion-slide {
+    height: 100%;
+
+    app-workout-list {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.sticky-header {
+  width: 100%;
+  vertical-align: center;
+  background: var(--sticky-header-color);
+  z-index: 0;
+
+  .list-label {
+    margin-top: 0;
+  }
+}
+
+// disable segment scrollbar on iOS
+::-webkit-scrollbar, *::-webkit-scrollbar {
+  display: none !important;
+  overflow: hidden !important;
+}

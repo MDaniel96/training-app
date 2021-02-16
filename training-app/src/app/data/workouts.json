@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Complex Core",
+    "image": "workout-img-1.png",
+    "duration": 38,
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Light Cardio",
+    "image": "workout-img-2.png",
+    "duration": 27,
+    "type": "CARDIO"
+  },
+  {
+    "name": "Strong Back",
+    "image": "workout-img-3.png",
+    "duration": 29,
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Build Triceps",
+    "image": "workout-img-4.png",
+    "duration": 25,
+    "type": "STRENGTH"
+  },
+  {
+    "name": "TRX Power Sets",
+    "image": "workout-img-5.png",
+    "duration": 40,
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Epic Gym Day",
+    "image": "workout-img-6.png",
+    "duration": 37,
+    "type": "CARDIO"
+  }
+]

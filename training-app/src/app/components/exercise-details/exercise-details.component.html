@@ -10,14 +10,16 @@
                 <div class="title">{{ exercise.name }}</div>
                 <div>
                     <div class="sub-title">Muscle group</div>
-                    <div class="muscles">
-                        <ion-badge *ngFor="let group of exercise.muscleGroups">{{ removeDashes(group) }}</ion-badge>
+                    <div>
+                        <ion-badge *ngFor="let group of exercise.muscleGroups" class="badge badge-yellow">
+                            {{ removeDashes(group) }}
+                        </ion-badge>
                     </div>
                 </div>
                 <div>
                     <div class="sub-title">Equipment</div>
-                    <div class="equipments">
-                        <ion-badge *ngFor="let equipment of exercise.equipments">
+                    <div>
+                        <ion-badge *ngFor="let equipment of exercise.equipments" class="badge badge-gray">
                             <div>{{ removeDashes(equipment) }}</div>
                             <img src="./assets/icon/dumbbell-icon.svg" alt="">
                         </ion-badge>

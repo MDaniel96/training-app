@@ -6,8 +6,8 @@
         </ion-buttons>
         <ion-title>Gym</ion-title>
     </ion-toolbar>
-    <ion-toolbar class="segment">
-        <ion-segment [(ngModel)]="selectedMuscleGroup" [class]="isIos() ? 'no-ripple' : ''" scrollable>
+    <ion-toolbar class="segment-toolbar">
+        <ion-segment [(ngModel)]="selectedMuscleGroup" [class]="isIos() ? 'no-ripple-button' : ''" scrollable>
             <ion-segment-button *ngFor="let muscleGroup of muscleGroups" [id]="muscleGroup + 'Id'"
                                 [value]="muscleGroup" (click)="scrollToMuscleGroup(muscleGroup)">
                 <ion-label>{{ muscleGroup }}</ion-label>
@@ -15,11 +15,11 @@
         </ion-segment>
     </ion-toolbar>
 </ion-header>
-<ion-content [scrollEvents]="true" (ionScroll)="onMuscleGroupsScroll($event)" fullscreen
+<ion-content [scrollEvents]="true" (ionScroll)="onExercisesScroll($event)" fullscreen
              [style]="scrollInProgress ? '--overflow: hidden' : ''">
     <div *ngFor="let muscleGroup of muscleGroups">
-        <ion-list-header mode="md" [id]="muscleGroup">
-            <ion-label>{{ capitalize(muscleGroup) }}</ion-label>
+        <ion-list-header mode="md" [id]="muscleGroup + 'ExId'">
+            <ion-label class="list-label">{{ muscleGroup }}</ion-label>
         </ion-list-header>
         <ion-list>
             <app-exercise-item *ngFor="let exercise of exercises" [exercise]="exercise"></app-exercise-item>

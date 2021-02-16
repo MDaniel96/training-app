@@ -55,14 +55,10 @@ video {
   }
 }
 
-ion-badge {
+.badge {
   margin-right: 5px;
   margin-top: 5px;
-  padding: 5.5px 7.5px;
   font-size: 14px;
-  border-radius: var(--border-radius-4);
-  color: var(--badge-font-color);
-  border: var(--badge-border);
 
   div {
     position: relative;

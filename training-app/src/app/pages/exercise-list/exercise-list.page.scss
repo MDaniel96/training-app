@@ -1,37 +1,3 @@
-ion-toolbar.segment {
-  height: var(--segment-height-45);
-
-  ion-segment {
-    height: var(--segment-height-45);
-
-    ion-segment-button {
-      height: var(--segment-height-45);
-      min-height: var(--segment-height-45);
-      border-radius: var(--border-radius-8);
-      --color: var(--segment-button-color);
-      --color-checked: var(--segment-color-checked-color);
-      --background-checked: var(--segment-background-checked-color);
-
-      ion-label {
-        font-weight: var(--font-weight-medium);
-      }
-    }
-  }
-}
-
-.no-ripple {
-  --ripple-color: transparent;
-}
-
-ion-list-header {
-  ion-label {
-    margin-top: 10px;
-    margin-left: 8px;
-    font-weight: var(--font-weight-medium);
-    color: var(--list-header-color);
-  }
-}
-
 ion-list {
   border-radius: var(--border-radius-4);
   margin: 0 12px 0 12px;
