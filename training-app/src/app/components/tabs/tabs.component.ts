@@ -19,6 +19,12 @@ export class TabsComponent {
         return this.selectedTab === tab;
     }
 
+    getLabelStyle(tab: string) {
+        if (this.isIos()) {
+            return this.isSelected(tab) ? 'ios-font ios-selected' : 'ios-font';
+        }
+    }
+
     isIos(): boolean {
         return this.platform.is('ios');
     }
