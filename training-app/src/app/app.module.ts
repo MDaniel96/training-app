@@ -17,15 +17,17 @@ import {AppPageRoutingModule} from './app-routing.module';
 import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ExerciseToolCardComponent} from './components/exercise-tool-card/exercise-tool-card.component';
+import {ExerciseToolCardComponent} from './components/exercise/exercise-tool-card/exercise-tool-card.component';
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
-import {ExerciseItemComponent} from './components/exercise-item/exercise-item.component';
-import {ExerciseDetailsComponent} from './components/exercise-details/exercise-details.component';
-import {WorkoutListComponent} from './components/workout-list/workout-list.component';
-import {WorkoutItemComponent} from './components/workout-item/workout-item.component';
+import {ExerciseItemComponent} from './components/exercise/exercise-item/exercise-item.component';
+import {ExerciseDetailsComponent} from './components/exercise/exercise-details/exercise-details.component';
+import {WorkoutListComponent} from './components/workout/workout-list/workout-list.component';
+import {WorkoutItemComponent} from './components/workout/workout-item/workout-item.component';
 import {HideHeaderDirective} from './directives/hide-header.directive';
 import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
 import {HidenavModule} from 'ionic4-hidenav';
+import {CustomWorkoutListComponent} from './components/workout/custom-workout-list/custom-workout-list.component';
+import {CustomWorkoutItemComponent} from './components/workout/custom-workout-item/custom-workout-item.component';
 
 @NgModule({
     imports: [
@@ -46,6 +48,8 @@ import {HidenavModule} from 'ionic4-hidenav';
         ExerciseDetailsComponent,
         WorkoutListComponent,
         WorkoutItemComponent,
+        CustomWorkoutListComponent,
+        CustomWorkoutItemComponent,
         Tab1Page,
         Tab2Page,
         WorkoutPage,

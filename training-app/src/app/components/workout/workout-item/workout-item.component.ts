@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
-import {Workout} from '../../model/workout.model';
+import {Workout} from '../../../model/workout.model';
 import {NavController, Platform} from '@ionic/angular';
-import {pageSlideAnimation} from '../../animations/page-slide.animation';
+import {pageSlideAnimation} from '../../../animations/page-slide.animation';
 
 @Component({
     selector: 'app-workout-item',
@@ -17,7 +17,7 @@ export class WorkoutItemComponent {
     }
 
     selectWorkout() {
-        const navigationState = {workout: this.workout};
+        const navigationState = {workout: this.workout, custom: false};
         this.nav.navigateForward('/workout-detail',
             this.isIos() ? {state: navigationState} : {state: navigationState, animation: pageSlideAnimation}
         );

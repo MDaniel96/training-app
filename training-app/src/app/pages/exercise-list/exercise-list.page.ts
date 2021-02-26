@@ -22,7 +22,7 @@ export class ExerciseListPage {
 
     constructor(private exerciseService: ExerciseService,
                 private platform: Platform) {
-        this.exercises = exerciseService.getExercises();
+        this.exercises = exerciseService.getAll();
     }
 
     scrollToMuscleGroup(id: string) {

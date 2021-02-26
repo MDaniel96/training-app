@@ -6,7 +6,7 @@ import {Platform} from '@ionic/angular';
     templateUrl: './exercise.page.html',
     styleUrls: [
         './exercise.page.scss',
-        '../../components/exercise-tool-card/exercise-tool-card.component.scss'
+        '../../components/exercise/exercise-tool-card/exercise-tool-card.component.scss'
     ],
 })
 export class ExercisePage {

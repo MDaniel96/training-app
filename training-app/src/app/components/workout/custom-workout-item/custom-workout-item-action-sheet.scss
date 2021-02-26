@@ -1,0 +1,16 @@
+.options-action-sheet {
+  --button-background: var(--ion-background-color);
+
+  span {
+    color: var(--ion-text-color);
+    font-weight: var(--font-weight-medium);
+  }
+}
+
+.delete {
+  --color: var(--light-red-100);
+
+  span {
+    color: var(--light-red-100);
+  }
+}

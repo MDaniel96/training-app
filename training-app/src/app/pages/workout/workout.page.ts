@@ -15,7 +15,7 @@ export class WorkoutPage implements AfterViewInit {
 
     @ViewChild(HideHeaderDirective) hideHeaderDirective: HideHeaderDirective;
 
-    exerciseTypes = ['bodyweight', 'gym', 'basic', 'trx', 'custom'];
+    exerciseTypes = ['bodyweight', 'gym', 'basic', 'trx'];
     selectedExerciseType = 'bodyweight';
 
     loadedExerciseTypes = ['bodyweight'];
@@ -42,6 +42,9 @@ export class WorkoutPage implements AfterViewInit {
 
     onExerciseTypeSlide() {
         this.slider.getActiveIndex().then(sliderIndex => {
+                if (!this.exerciseTypes.includes('custom')) {
+                    sliderIndex--;
+                }
                 this.selectedExerciseType = this.exerciseTypes[sliderIndex];
                 document.getElementById(this.selectedExerciseType + 'Id').scrollIntoView({
                     behavior: 'smooth',
@@ -84,5 +87,22 @@ export class WorkoutPage implements AfterViewInit {
         setTimeout(() => {
             this.showSlides = true;
         }, 50);
+
+        // fix initialSlide bug
+        setTimeout(() => {
+            this.slider.getActiveIndex().then(index => {
+                this.exerciseTypes.unshift('custom');
+                this.loadedExerciseTypes.unshift('custom');
+                this.slider.slideTo(index + 1, 0);
+            });
+        }, 500);
+    }
+
+    getSegmentExerciseTypes(): string[] {
+        if (!this.exerciseTypes.includes('custom')) {
+            return ['custom', ...this.exerciseTypes];
+        } else {
+            return this.exerciseTypes;
+        }
     }
 }

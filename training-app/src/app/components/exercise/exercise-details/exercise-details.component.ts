@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, Input} from '@angular/core';
-import {Exercise} from '../../model/exercise.model';
-import {fadeInAnimation} from '../../animations/fade-in.animation';
+import {Exercise} from '../../../model/exercise.model';
+import {fadeInAnimation} from '../../../animations/fade-in.animation';
 
 @Component({
     selector: 'app-exercise-details',
