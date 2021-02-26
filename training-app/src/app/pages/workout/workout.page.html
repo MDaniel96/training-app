@@ -11,9 +11,10 @@
         </ion-toolbar>
         <ion-toolbar class="segment-toolbar">
             <ion-segment [(ngModel)]="selectedExerciseType" [class]="isIos() ? 'no-ripple-button' : ''" scrollable>
-                <ion-segment-button *ngFor="let exerciseType of exerciseTypes" [id]="exerciseType + 'Id'"
+                <ion-segment-button *ngFor="let exerciseType of getSegmentExerciseTypes()" [id]="exerciseType + 'Id'"
                                     [value]="exerciseType" (click)="slideToExerciseType(exerciseType)">
-                    <ion-label>{{ exerciseType }}</ion-label>
+                    <ion-label *ngIf="exerciseType !== 'custom'">{{ exerciseType }}</ion-label>
+                    <ion-icon *ngIf="exerciseType === 'custom'" name="pencil"></ion-icon>
                 </ion-segment-button>
             </ion-segment>
         </ion-toolbar>
@@ -26,9 +27,10 @@
     <ion-slides #slider (ionSlideWillChange)="beforeExerciseTypeSlide()" (ionSlideDidChange)="onExerciseTypeSlide()"
                 *ngIf="showSlides">
         <ion-slide *ngFor="let exerciseType of exerciseTypes">
-            <app-workout-list *ngIf="isWorkoutListLoaded(exerciseType)"
+            <app-workout-list *ngIf="exerciseType !== 'custom' && isWorkoutListLoaded(exerciseType)"
                               (currentMuscleGroup)="currentMuscleGroupChanged($event)"
             ></app-workout-list>
+            <app-custom-workout-list *ngIf="exerciseType === 'custom'"></app-custom-workout-list>
         </ion-slide>
     </ion-slides>
 </ion-content>

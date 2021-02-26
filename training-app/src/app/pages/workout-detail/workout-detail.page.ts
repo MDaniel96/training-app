@@ -12,6 +12,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class WorkoutDetailPage implements AfterViewInit {
 
     workout: Workout;
+    custom: boolean;
 
     @ViewChild('title') title: ElementRef;
 
@@ -27,8 +28,10 @@ export class WorkoutDetailPage implements AfterViewInit {
 
     private getWorkoutFromRoute() {
         this.route.queryParams.subscribe(() => {
-            if (this.router.getCurrentNavigation().extras.state) {
-                this.workout = this.router.getCurrentNavigation().extras.state.workout;
+            const navigationState = this.router.getCurrentNavigation().extras.state;
+            if (navigationState) {
+                this.workout = navigationState.workout;
+                this.custom = navigationState.custom;
             }
         });
     }

@@ -16,7 +16,8 @@
         </div>
         <div #shrinkexpand>
             <div class="image-container">
-                <img [src]="'./assets/image/workouts/' + workout.image" alt="workout">
+                <img [src]="!custom ? './assets/image/workouts/' + workout.image : './assets/image/tools/more-tools-img.jpg'"
+                     alt="workout">
                 <div class="backdrop"></div>
             </div>
         </div>
@@ -24,7 +25,7 @@
 </ion-header>
 <ion-content hidenav-sh-content fullscreen>
     <ion-grid>
-        <ion-row>
+        <ion-row *ngIf="!custom">
             <ion-col size="3">
                 <div class="card">
                     <div class="title">Duration</div>
@@ -41,6 +42,20 @@
                 <div class="card">
                     <div class="title">Equipment</div>
                     <div class="content">{{workout.equipments}}</div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="custom">
+            <ion-col size="6">
+                <div class="card">
+                    <div class="title custom">Duration</div>
+                    <div class="content custom">{{workout.duration}} min</div>
+                </div>
+            </ion-col>
+            <ion-col size="6">
+                <div class="card">
+                    <div class="title custom">Exercise number</div>
+                    <div class="content custom">{{workout.exercises.length}}</div>
                 </div>
             </ion-col>
         </ion-row>

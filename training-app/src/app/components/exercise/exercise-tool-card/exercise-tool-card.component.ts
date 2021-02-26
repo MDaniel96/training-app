@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {NavController, Platform} from '@ionic/angular';
-import {pageSlideAnimation} from '../../animations/page-slide.animation';
+import {pageSlideAnimation} from '../../../animations/page-slide.animation';
 
 @Component({
     selector: 'app-exercise-tool-card',

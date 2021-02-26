@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {Workout} from '../../model/workout.model';
-import {WorkoutService} from '../../service/workout.service';
+import {Workout} from '../../../model/workout.model';
+import {WorkoutService} from '../../../service/workout.service';
 
 @Component({
     selector: 'app-workout-list',
@@ -16,7 +16,7 @@ export class WorkoutListComponent {
     muscleGroups = ['abs', 'chest', 'shoulder', 'biceps', 'leg'];
 
     constructor(private workoutService: WorkoutService) {
-        this.workouts = workoutService.getWorkouts();
+        this.workouts = workoutService.getAll();
     }
 
     onWorkoutsScroll(event: CustomEvent) {

@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Exercise} from '../../model/exercise.model';
+import {Exercise} from '../../../model/exercise.model';
 import {ModalController, Platform} from '@ionic/angular';
 import {ExerciseDetailsComponent} from '../exercise-details/exercise-details.component';
 

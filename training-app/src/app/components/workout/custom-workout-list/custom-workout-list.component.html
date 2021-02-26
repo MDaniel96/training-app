@@ -1,0 +1,16 @@
+<ion-content fullscreen [scrollEvents]="true">
+    <br><br><br><br><br> <!-- Fix: ion-slides fullscreen bug -->
+    <ion-list *ngIf="customWorkoutService.getAll().length !== 0" lines="none">
+        <app-custom-workout-item *ngFor="let workout of customWorkoutService.getAll()"
+                                 [workout]="workout"
+        ></app-custom-workout-item>
+    </ion-list>
+    <div *ngIf="customWorkoutService.getAll().length === 0">
+        You have no custom workouts added yet.
+    </div>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>
