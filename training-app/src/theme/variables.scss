@@ -44,6 +44,9 @@
   --slide-bullett-border: 2px solid var(--trx-black-100);
 
   --workout-info-card-background: var(--trx-black-8);
+
+  --custom-workout-exercise-checked: var(--trx-black-30);
+  --custom-workout-toolbar-color: var(--trx-black-100);
 }
 
 /** Night mode **/
@@ -91,6 +94,9 @@ body.dark {
   --slide-bullett-border: 2px solid var(--trx-yellow-100);
 
   --workout-info-card-background: var(--white-8);
+
+  --custom-workout-exercise-checked: var(--white-10);
+  --custom-workout-toolbar-color: var(--light-gray-toolbar-100);
 }
 
 /** Only Android **/

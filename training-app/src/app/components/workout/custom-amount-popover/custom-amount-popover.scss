@@ -1,0 +1,11 @@
+.set-amount-popover .popover-content {
+  left: 12.5% !important;
+  width: 75%;
+}
+
+@media only screen and (min-width: 600px) {
+  .set-amount-popover .popover-content {
+    left: 25% !important;
+    width: 50%;
+  }
+}

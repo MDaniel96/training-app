@@ -29,6 +29,7 @@
 
 @import "src/app/components/exercise/exercise-details/exercise-details-modal.scss";
 @import "src/app/components/workout/custom-workout-item/custom-workout-item-action-sheet.scss";
+@import "src/app/components/workout/custom-amount-popover/custom-amount-popover.scss";
 
 .main-header {
   ion-title {
@@ -96,4 +97,17 @@
 
 .badge-yellow {
   background-color: var(--badge-muscle-background-color);
+}
+
+ion-icon.toolbar {
+  font-size: 24px;
+}
+
+.empty-list {
+  font-size: 15px;
+  text-align: center;
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  left: 0;
 }

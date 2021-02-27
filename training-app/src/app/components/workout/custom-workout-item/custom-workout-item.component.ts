@@ -28,6 +28,7 @@ export class CustomWorkoutItemComponent {
 
     async showOptions(event) {
         event.stopPropagation();
+        const navigationState = {workout: this.workout};
         const actionSheet = await this.actionSheetController.create({
             cssClass: 'options-action-sheet',
             buttons: [
@@ -35,7 +36,7 @@ export class CustomWorkoutItemComponent {
                     text: 'Edit',
                     icon: 'pencil',
                     handler: () => {
-                        // TODO: edit workout
+                        this.nav.navigateForward('/workout-custom-edit', {state: navigationState});
                     }
                 },
                 {

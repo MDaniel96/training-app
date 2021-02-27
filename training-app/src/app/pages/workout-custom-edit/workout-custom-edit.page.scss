@@ -1,0 +1,43 @@
+@import "../../components/exercise/exercise-item/exercise-item.component.scss";
+
+.toolbar {
+  font-size: 20px;
+  font-weight: var(--font-weight-medium);
+}
+
+ion-icon.toolbar {
+  font-size: 24px;
+}
+
+ion-input {
+  text-align: right;
+  font-size: 15px;
+}
+
+ion-label {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+}
+
+ion-list {
+  border-radius: var(--border-radius-4);
+  background-color: var(--list-background-color);
+  margin: 0 12px 12px;
+}
+
+ion-item {
+  --background: var(--transparent);
+  --highlight-color-valid: var(--transparent);
+  --highlight-color-invalid: var(--transparent);
+  --highlight-color-focused: var(--transparent);
+}
+
+ion-toolbar.exercise-selected {
+  --background: var(--custom-workout-toolbar-color);
+  color: white;
+}
+
+span.line {
+  font-size: 22px;
+}
+

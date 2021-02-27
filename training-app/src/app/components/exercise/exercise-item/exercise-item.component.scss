@@ -20,11 +20,32 @@ ion-item {
   }
 
   span {
+    font-weight: var(--font-weight-regular);
     font-size: 14px;
+  }
+
+  span.right {
+    float: right;
+  }
+
+  span.left {
+    float: left;
+    margin-top: 3px;
   }
 
   .rest-label {
     margin-left: 10px;
     font-weight: var(--font-weight-regular);
   }
+}
+
+ion-item.checked {
+  --ion-background-color: var(--custom-workout-exercise-checked);
+}
+
+:host ::ng-deep ion-checkbox {
+  --background-checked: var(--trx-yellow-100);
+  --checkmark-color: var(--trx-black-90);
+  --border-color: var(--ion-text-color);
+  --border-color-checked: var(--trx-yellow-100);
 }

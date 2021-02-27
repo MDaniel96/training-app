@@ -7,8 +7,11 @@
                     </ion-back-button>
                 </ion-buttons>
                 <ion-buttons slot="end">
+                    <ion-button *ngIf="custom" (click)="editWorkout()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
+                        <ion-icon name="pencil" class="toolbar"></ion-icon>
+                    </ion-button>
                     <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
-                        <ion-icon name="headset"></ion-icon>
+                        <ion-icon name="headset" class="toolbar"></ion-icon>
                     </ion-button>
                 </ion-buttons>
                 <div class="title"><span #title>{{workout.name}}</span></div>

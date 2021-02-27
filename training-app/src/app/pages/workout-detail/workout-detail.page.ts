@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
-import {Platform} from '@ionic/angular';
+import {NavController, Platform} from '@ionic/angular';
 import {ExerciseService} from '../../service/exercise.service';
 import {Workout} from '../../model/workout.model';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -22,7 +22,8 @@ export class WorkoutDetailPage implements AfterViewInit {
     constructor(private exerciseService: ExerciseService,
                 private platform: Platform,
                 private route: ActivatedRoute,
-                private router: Router) {
+                private router: Router,
+                private nav: NavController) {
         this.getWorkoutFromRoute();
     }
 
@@ -50,6 +51,11 @@ export class WorkoutDetailPage implements AfterViewInit {
         const translateRatio = (1 - scaleRatio) / 0.2;
         const translate = `translateX(${this.titleDistance * translateRatio * (1 + (1 - scaleRatio)) * -1}px)`;
         this.title.nativeElement.style.transform = scale + translate;
+    }
+
+    editWorkout() {
+        const navigationState = {workout: this.workout};
+        this.nav.navigateForward('/workout-custom-edit', {state: navigationState});
     }
 
     isIos(): boolean {

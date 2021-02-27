@@ -1,0 +1,29 @@
+div.padding {
+  text-align: left;
+  font-size: 16px;
+  margin-left: 20px;
+
+  .title {
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+  }
+
+  ion-item {
+    --highlight-color-valid: var(--transparent);
+    --highlight-color-invalid: var(--transparent);
+    --highlight-color-focused: var(--transparent);
+
+    ion-input {
+      text-align: right;
+    }
+  }
+
+  span {
+    padding: 15px;
+  }
+
+  .popover-button {
+    position: relative;
+    margin-bottom: 5px;
+  }
+}

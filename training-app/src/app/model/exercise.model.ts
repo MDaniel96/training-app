@@ -7,4 +7,7 @@ export class Exercise {
     description: string;
     type: string;
     amount: number;
+
+    // helpers
+    isChecked = false;
 }

@@ -8,6 +8,7 @@ import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
 import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
+import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-edit.page';
 
 const routes: Routes = [
     {
@@ -53,6 +54,10 @@ const routes: Routes = [
     {
         path: 'workout-detail',
         component: WorkoutDetailPage
+    },
+    {
+        path: 'workout-custom-edit',
+        component: WorkoutCustomEditPage
     },
     {
         path: '',
