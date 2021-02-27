@@ -21,7 +21,7 @@
     </ion-header>
     <ion-header #stickyHeader class="sticky-header ion-no-border" slot="fixed" mode="md">
         <ion-list-header *ngIf="currentMuscleGroup">
-            <ion-label class="list-label" [@fadeIn]="stickyHeaderAnimState">{{ currentMuscleGroup }}</ion-label>
+            <ion-label class="list-label" [@fadeInState]="stickyHeaderAnimState">{{ currentMuscleGroup }}</ion-label>
         </ion-list-header>
     </ion-header>
     <ion-slides #slider (ionSlideWillChange)="beforeExerciseTypeSlide()" (ionSlideDidChange)="onExerciseTypeSlide()"

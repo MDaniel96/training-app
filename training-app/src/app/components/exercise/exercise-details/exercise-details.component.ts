@@ -1,12 +1,12 @@
 import {AfterViewInit, Component, Input} from '@angular/core';
 import {Exercise} from '../../../model/exercise.model';
-import {fadeInAnimation} from '../../../animations/fade-in.animation';
+import {fadeInStateAnimation} from '../../../animations/fade-in.animation';
 
 @Component({
     selector: 'app-exercise-details',
     templateUrl: './exercise-details.component.html',
     styleUrls: ['./exercise-details.component.scss'],
-    animations: [fadeInAnimation]
+    animations: [fadeInStateAnimation]
 })
 export class ExerciseDetailsComponent implements AfterViewInit {
 

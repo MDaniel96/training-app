@@ -28,6 +28,8 @@ import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
 import {HidenavModule} from 'ionic4-hidenav';
 import {CustomWorkoutListComponent} from './components/workout/custom-workout-list/custom-workout-list.component';
 import {CustomWorkoutItemComponent} from './components/workout/custom-workout-item/custom-workout-item.component';
+import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-edit.page';
+import {CustomAmountPopoverComponent} from './components/workout/custom-amount-popover/custom-amount-popover.component';
 
 @NgModule({
     imports: [
@@ -50,10 +52,12 @@ import {CustomWorkoutItemComponent} from './components/workout/custom-workout-it
         WorkoutItemComponent,
         CustomWorkoutListComponent,
         CustomWorkoutItemComponent,
+        CustomAmountPopoverComponent,
         Tab1Page,
         Tab2Page,
         WorkoutPage,
         WorkoutDetailPage,
+        WorkoutCustomEditPage,
         ExercisePage,
         ExerciseListPage,
         Tab5Page,

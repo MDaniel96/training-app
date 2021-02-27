@@ -1,13 +1,13 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {IonSlides, Platform} from '@ionic/angular';
 import {HideHeaderDirective} from '../../directives/hide-header.directive';
-import {fadeInAnimation} from '../../animations/fade-in.animation';
+import {fadeInStateAnimation} from '../../animations/fade-in.animation';
 
 @Component({
     selector: 'app-workout',
     templateUrl: 'workout.page.html',
     styleUrls: ['workout.page.scss'],
-    animations: [fadeInAnimation]
+    animations: [fadeInStateAnimation]
 })
 export class WorkoutPage implements AfterViewInit {
 
@@ -60,7 +60,9 @@ export class WorkoutPage implements AfterViewInit {
             this.stickyHeaderAnimState = 'out';
             setTimeout(() => this.stickyHeaderAnimState = 'in', 80);
         }
-        this.currentMuscleGroup = muscleGroup;
+        if (this.selectedExerciseType !== 'custom') {
+            this.currentMuscleGroup = muscleGroup;
+        }
     }
 
     preLoadWorkoutLists() {
