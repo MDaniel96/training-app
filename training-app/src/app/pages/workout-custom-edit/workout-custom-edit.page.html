@@ -1,16 +1,17 @@
 <ion-header [mode]="'md'" class="ion-no-border">
-    <ng-template [ngIf]="selectedExerciseNumber === 0">
+    <ng-template [ngIf]="!isExerciseSelected">
         <ion-toolbar>
             <ion-buttons slot="start">
                 <ion-back-button icon="close-outline"></ion-back-button>
             </ion-buttons>
-            <ion-title class="toolbar">Edit workout</ion-title>
-            <div slot="end" class="ion-padding-end toolbar">
+            <ion-title class="toolbar">Edit Workout</ion-title>
+            <div slot="end" class="ion-padding toolbar ion-activatable ripple-parent" style="position: relative">
                 <span (click)="save()">Save</span>
+                <ion-ripple-effect></ion-ripple-effect>
             </div>
         </ion-toolbar>
     </ng-template>
-    <ng-template [ngIf]="selectedExerciseNumber !== 0">
+    <ng-template [ngIf]="isExerciseSelected">
         <ion-toolbar class="exercise-selected">
             <ion-buttons slot="start">
                 <ion-button (click)="closeAmountEdit()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
@@ -18,7 +19,7 @@
                               [name]="isIos() ? 'chevron-back-outline' : 'arrow-back-outline'"></ion-icon>
                 </ion-button>
             </ion-buttons>
-            <ion-title class="toolbar">{{ selectedExerciseNumber }}</ion-title>
+            <ion-title class="toolbar">{{ getSelectedExerciseNumber() }}</ion-title>
             <ion-buttons slot="end">
                 <ion-button (click)="changeInterval()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
                     <ion-icon class="toolbar" name="stopwatch-outline"></ion-icon>
@@ -40,7 +41,7 @@
         <ion-input placeholder="Custom workout title" [(ngModel)]="workout.name"></ion-input>
     </ion-item>
     <ion-list *ngIf="workout.exercises && workout.exercises.length > 0">
-        <div @fadeIn *ngIf="selectedExerciseNumber === 0">
+        <div @fadeIn *ngIf="!isExerciseSelected">
             <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
                 <ion-item *ngFor="let exercise of workout.exercises"
                           button detail="false" (click)="selectExercise(exercise)">
@@ -58,15 +59,20 @@
                 </ion-item>
             </ion-reorder-group>
         </div>
-        <div @fadeIn *ngIf="selectedExerciseNumber !== 0">
+        <div @fadeIn *ngIf="isExerciseSelected">
             <app-exercise-item *ngFor="let exercise of workout.exercises"
                                (selected)="exerciseSelected()"
                                [exercise]="exercise"
-                               [selectedExerciseNumber]="selectedExerciseNumber"
-                               [amount]="true" [custom]="true"></app-exercise-item>
+                               [selectable]="isExerciseSelected"
+                               [hasAmount]="true" [custom]="true"></app-exercise-item>
         </div>
     </ion-list>
     <div *ngIf="!workout.exercises || workout.exercises.length === 0" class="empty-list">
         You have no exercises added yet.
     </div>
 </ion-content>
+<ion-footer class="footer-button ion-no-border">
+    <div>
+        <ion-button class="dark-white" (click)="addExercises()">Add Exercises</ion-button>
+    </div>
+</ion-footer>

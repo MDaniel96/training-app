@@ -95,28 +95,3 @@ ion-list {
   background-color: var(--list-background-color);
   margin: 0 12px 12px;
 }
-
-ion-footer {
-  text-align: center;
-  bottom: 6.5px;
-  border-color: transparent;
-}
-
-ion-button.start {
-  --border-radius: var(--border-radius-40);
-  --background: var(--trx-yellow-97);
-  --background-activated: var(--trx-yellow-100);
-  color: black;
-  font-weight: var(--font-weight-bold);
-  font-size: 15px;
-  letter-spacing: 1.2px;
-  height: 55px;
-  width: 80vw;
-  text-transform: capitalize;
-}
-
-@media only screen and (min-width: 600px) {
-  ion-button.start {
-    width: 50vw;
-  }
-}

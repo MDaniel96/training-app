@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {Platform} from '@ionic/angular';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Workout} from '../../model/workout.model';
 
 @Component({
     selector: 'app-exercise',
@@ -11,7 +13,21 @@ import {Platform} from '@ionic/angular';
 })
 export class ExercisePage {
 
-    constructor(private platform: Platform) {
+    customWorkout: Workout;
+
+    constructor(private platform: Platform,
+                private route: ActivatedRoute,
+                private router: Router) {
+        this.getWorkoutFromRoute();
+    }
+
+    private getWorkoutFromRoute() {
+        this.route.queryParams.subscribe(() => {
+            const navigationState = this.router.getCurrentNavigation().extras.state;
+            if (navigationState) {
+                this.customWorkout = navigationState.workout;
+            }
+        });
     }
 
     isIos(): boolean {

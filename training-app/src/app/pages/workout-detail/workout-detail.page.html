@@ -66,12 +66,12 @@
     <ion-list>
         <app-exercise-item *ngFor="let exercise of workout.exercises"
                            [exercise]="exercise"
-                           [amount]="true"
+                           [hasAmount]="true"
         ></app-exercise-item>
     </ion-list>
 </ion-content>
-<ion-footer class="ion-no-border">
+<ion-footer class="footer-button ion-no-border">
     <div>
-        <ion-button class="start">Start Workout</ion-button>
+        <ion-button class="yellow">Start Workout</ion-button>
     </div>
 </ion-footer>

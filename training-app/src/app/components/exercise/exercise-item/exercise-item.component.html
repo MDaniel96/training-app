@@ -1,19 +1,19 @@
 <ion-item *ngIf="exercise.type !== 'REST'"
           button detail="false" (click)="selectExercise()"
-          [ngClass]="exercise.isChecked ? 'checked' : ''">
+          [ngClass]="exercise.isSelected ? 'checked' : ''">
     <div slot="start">
         <img src="./assets/image/exercises/{{ exercise.image }}" alt="">
     </div>
     <ion-label>
         {{ exercise.name }}
         <br *ngIf="custom">
-        <span *ngIf="amount" [ngClass]="custom ? 'left' : 'right'">
+        <span *ngIf="hasAmount"
+              [ngClass]="custom ? 'left' : 'right'">
             {{ exercise.amount }} {{ getMetrics() }}
         </span>
     </ion-label>
-    <ng-template [ngIf]="custom">
-        <ion-checkbox *ngIf="selectedExerciseNumber !== 0" [checked]="exercise.isChecked" slot="end"></ion-checkbox>
-    </ng-template>
+    <ion-checkbox *ngIf="selectable" slot="end"
+                  [checked]="exercise.isSelected"></ion-checkbox>
 </ion-item>
 <ion-item *ngIf="exercise.type === 'REST'" lines="none">
     <ion-label class="rest-label">Rest</ion-label>

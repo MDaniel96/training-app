@@ -27,9 +27,10 @@ ion-list {
 
 ion-item {
   --background: var(--transparent);
-  --highlight-color-valid: var(--transparent);
-  --highlight-color-invalid: var(--transparent);
-  --highlight-color-focused: var(--transparent);
+  --border-color: var(--input-border-color);
+  --highlight-color-valid: var(--input-focused-border-color);
+  --highlight-color-invalid: var(--input-focused-border-color);
+  --highlight-color-focused: var(--input-focused-border-color);
 }
 
 ion-toolbar.exercise-selected {
@@ -40,4 +41,3 @@ ion-toolbar.exercise-selected {
 span.line {
   font-size: 22px;
 }
-

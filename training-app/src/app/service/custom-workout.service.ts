@@ -12,6 +12,12 @@ export class CustomWorkoutService {
         return this.workouts;
     }
 
+    save(workout: Workout) {
+        if (!this.workouts.includes(workout)) {
+            this.workouts.push(workout);
+        }
+    }
+
     delete(workout: Workout) {
         this.workouts = this.workouts.filter(w => w !== workout);
     }

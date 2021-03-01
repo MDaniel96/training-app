@@ -9,5 +9,5 @@ export class Exercise {
     amount: number;
 
     // helpers
-    isChecked = false;
+    isSelected = false;
 }

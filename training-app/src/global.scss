@@ -111,3 +111,37 @@ ion-icon.toolbar {
   right: 0;
   left: 0;
 }
+
+ion-footer.footer-button {
+  text-align: center;
+  bottom: 6.5px;
+  border-color: transparent;
+
+  ion-button {
+    --border-radius: var(--border-radius-40);
+    color: black;
+    font-weight: var(--font-weight-bold);
+    font-size: 15px;
+    letter-spacing: 1.2px;
+    height: 55px;
+    width: 80vw;
+    text-transform: capitalize;
+  }
+
+  ion-button.yellow {
+    --background: var(--trx-yellow-97);
+    --background-activated: var(--trx-yellow-100);
+  }
+
+  ion-button.dark-white {
+    --background: var(--footer-button-background-color);
+    --background-activated: var(--footer-button-background-activated-color);
+    color: var(--footer-button-font-color);
+  }
+
+  @media only screen and (min-width: 600px) {
+    ion-button {
+      width: 50vw;
+    }
+  }
+}

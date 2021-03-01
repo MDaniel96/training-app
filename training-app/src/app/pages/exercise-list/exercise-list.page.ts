@@ -1,14 +1,17 @@
 import {Component, ViewChild} from '@angular/core';
 import {ExerciseService} from '../../service/exercise.service';
 import {Exercise} from '../../model/exercise.model';
-import {IonContent, IonHeader, Platform} from '@ionic/angular';
+import {IonContent, IonHeader, NavController, Platform, ViewDidLeave} from '@ionic/angular';
+import {ActivatedRoute, Router} from '@angular/router';
+import {cloneDeep} from 'lodash';
+import {Workout} from '../../model/workout.model';
 
 @Component({
     selector: 'app-exercise-list',
     templateUrl: './exercise-list.page.html',
     styleUrls: ['./exercise-list.page.scss'],
 })
-export class ExerciseListPage {
+export class ExerciseListPage implements ViewDidLeave {
 
     @ViewChild(IonContent) content: IonContent;
     @ViewChild(IonHeader) header: IonHeader;
@@ -20,14 +23,29 @@ export class ExerciseListPage {
 
     scrollInProgress = false;
 
+    customWorkout: Workout;
+
     constructor(private exerciseService: ExerciseService,
-                private platform: Platform) {
+                private platform: Platform,
+                private route: ActivatedRoute,
+                private router: Router,
+                private nav: NavController) {
         this.exercises = exerciseService.getAll();
+        this.getWorkoutFromRoute();
+    }
+
+    private getWorkoutFromRoute() {
+        this.route.queryParams.subscribe(() => {
+            const navigationState = this.router.getCurrentNavigation().extras.state;
+            if (navigationState) {
+                this.customWorkout = navigationState.workout;
+            }
+        });
     }
 
     scrollToMuscleGroup(id: string) {
         this.scrollInProgress = true;
-        const yGroup = this.getOffsetTop(id + 'ExId');
+        const yGroup = this.getOffsetTop(this.getListHeaderId(id));
         // @ts-ignore
         const headerHeight = this.header.el.offsetHeight;
         this.content.scrollToPoint(0, yGroup - headerHeight, 300).then(() => {
@@ -41,23 +59,23 @@ export class ExerciseListPage {
             const headerHeight = this.header.el.offsetHeight;
             const yCurrent = event.detail.scrollTop + headerHeight + 20;
 
-            if (yCurrent > this.getOffsetTop('legExId')) {
-                this.selectedMuscleGroup = 'leg';
-                this.scrollIntoView('legId');
-            } else if (yCurrent > this.getOffsetTop('bicepsExId')) {
-                this.selectedMuscleGroup = 'biceps';
-                this.scrollIntoView('bicepsId');
-            } else if (yCurrent > this.getOffsetTop('shoulderExId')) {
-                this.selectedMuscleGroup = 'shoulder';
-                this.scrollIntoView('shoulderId');
-            } else if (yCurrent > this.getOffsetTop('chestExId')) {
-                this.selectedMuscleGroup = 'chest';
-                this.scrollIntoView('chestId');
-            } else if (yCurrent > this.getOffsetTop('absExId')) {
-                this.selectedMuscleGroup = 'abs';
-                this.scrollIntoView('absId');
-            }
+            let selected = false;
+            this.muscleGroups.slice().reverse().forEach(muscleGroup => {
+                if (yCurrent > this.getOffsetTop(this.getListHeaderId(muscleGroup)) && !selected) {
+                    this.selectedMuscleGroup = muscleGroup;
+                    this.scrollIntoView(this.getSegmentId(muscleGroup));
+                    selected = true;
+                }
+            });
         }
+    }
+
+    getSegmentId(muscleGroup: string): string {
+        return this.customWorkout ? muscleGroup + 'CustomExSegmentId' : muscleGroup + 'ExSegmentId';
+    }
+
+    getListHeaderId(muscleGroup: string): string {
+        return this.customWorkout ? muscleGroup + 'CustomExListId' : muscleGroup + 'ExListId';
     }
 
     getOffsetTop(id: string): number {
@@ -66,6 +84,30 @@ export class ExerciseListPage {
 
     scrollIntoView(id: string) {
         document.getElementById(id).scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'});
+    }
+
+    addSelectedToCustomWorkout() {
+        const selectedExercises: Exercise[] = cloneDeep(this.exercises.filter(e => e.isSelected));
+        selectedExercises.forEach(exercise => {
+            exercise.isSelected = false;
+            exercise.type = 'INTERVAL';
+            exercise.amount = 30;
+        });
+        this.customWorkout.exercises.push(...selectedExercises);
+        this.clearSelected();
+        this.nav.navigateBack('workout-custom-edit');
+    }
+
+    ionViewDidLeave() {
+        this.clearSelected();
+    }
+
+    clearSelected() {
+        this.exercises.forEach(e => e.isSelected = false);
+    }
+
+    getSelectedNumber() {
+        return this.exercises.filter(e => e.isSelected).length;
     }
 
     isIos(): boolean {

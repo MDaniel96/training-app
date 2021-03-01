@@ -23,17 +23,13 @@ export class WorkoutListComponent {
         const headerHeight = 50;
         const yCurrent = event.detail.scrollTop + headerHeight + 20;
 
-        if (yCurrent > this.getOffsetTop('legWoId')) {
-            this.currentMuscleGroup.emit('leg');
-        } else if (yCurrent > this.getOffsetTop('bicepsWoId')) {
-            this.currentMuscleGroup.emit('biceps');
-        } else if (yCurrent > this.getOffsetTop('shoulderWoId')) {
-            this.currentMuscleGroup.emit('shoulder');
-        } else if (yCurrent > this.getOffsetTop('chestWoId')) {
-            this.currentMuscleGroup.emit('chest');
-        } else if (yCurrent > this.getOffsetTop('absWoId')) {
-            this.currentMuscleGroup.emit('abs');
-        }
+        let selected = false;
+        this.muscleGroups.slice().reverse().forEach(muscleGroup => {
+            if (yCurrent > this.getOffsetTop(muscleGroup + 'WoId') && !selected) {
+                this.currentMuscleGroup.emit(muscleGroup);
+                selected = true;
+            }
+        });
     }
 
     getOffsetTop(id: string): number {

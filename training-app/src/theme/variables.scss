@@ -47,6 +47,13 @@
 
   --custom-workout-exercise-checked: var(--trx-black-30);
   --custom-workout-toolbar-color: var(--trx-black-100);
+
+  --input-border-color: var(--trx-black-30);
+  --input-focused-border-color: var(--trx-black-90);
+
+  --footer-button-background-color: var(--trx-black-97);
+  --footer-button-background-activated-color: var(--trx-black-90);
+  --footer-button-font-color: white;
 }
 
 /** Night mode **/
@@ -97,6 +104,13 @@ body.dark {
 
   --custom-workout-exercise-checked: var(--white-10);
   --custom-workout-toolbar-color: var(--light-gray-toolbar-100);
+
+  --input-border-color: var(--white-25);
+  --input-focused-border-color: var(--white-95);
+
+  --footer-button-background-color: var(--dark-white-97);
+  --footer-button-background-activated-color: var(--white-60);
+  --footer-button-font-color: black;
 }
 
 /** Only Android **/
