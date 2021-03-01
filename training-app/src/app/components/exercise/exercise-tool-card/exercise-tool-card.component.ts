@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {NavController, Platform} from '@ionic/angular';
 import {pageSlideAnimation} from '../../../animations/page-slide.animation';
+import {Workout} from '../../../model/workout.model';
 
 @Component({
     selector: 'app-exercise-tool-card',
@@ -12,6 +13,8 @@ export class ExerciseToolCardComponent {
     @Input() title: string;
     @Input() imageUrl: string;
 
+    @Input() customWorkout: Workout;
+
     constructor(private platform: Platform,
                 private nav: NavController) {
     }
@@ -21,6 +24,13 @@ export class ExerciseToolCardComponent {
     }
 
     selectTool() {
-        this.nav.navigateForward('/tabs/exercises/gym', this.isIos() ? {} : {animation: pageSlideAnimation});
+        if (!this.customWorkout) {
+            this.nav.navigateForward('/tabs/exercises/gym', this.isIos() ? {} : {animation: pageSlideAnimation});
+        } else {
+            const navigationState = {workout: this.customWorkout};
+            this.nav.navigateForward('/workout-custom-edit/add-exercises-select',
+                this.isIos() ? {state: navigationState} : {state: navigationState, animation: pageSlideAnimation}
+            );
+        }
     }
 }

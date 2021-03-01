@@ -12,10 +12,9 @@ export class ExerciseItemComponent {
 
     @Input() exercise: Exercise;
 
-    @Input() amount: boolean;
+    @Input() selectable: boolean;
+    @Input() hasAmount: boolean;
     @Input() custom: boolean;
-
-    @Input() selectedExerciseNumber: number;
 
     @Output() selected = new EventEmitter<void>();
 
@@ -24,15 +23,15 @@ export class ExerciseItemComponent {
     }
 
     selectExercise() {
-        if (this.custom) {
-            this.exercise.isChecked = !this.exercise.isChecked;
+        if (this.selectable) {
+            this.exercise.isSelected = !this.exercise.isSelected;
             this.selected.emit();
         } else {
-            this.openExerciseModal().then();
+            this.showExerciseDetails().then();
         }
     }
 
-    private async openExerciseModal() {
+    private async showExerciseDetails() {
         const modal = await this.modalController.create({
             component: ExerciseDetailsComponent,
             cssClass: 'exercise-detail-modal',

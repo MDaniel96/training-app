@@ -8,7 +8,7 @@
     </ion-toolbar>
     <ion-toolbar class="segment-toolbar">
         <ion-segment [(ngModel)]="selectedMuscleGroup" [class]="isIos() ? 'no-ripple-button' : ''" scrollable>
-            <ion-segment-button *ngFor="let muscleGroup of muscleGroups" [id]="muscleGroup + 'Id'"
+            <ion-segment-button *ngFor="let muscleGroup of muscleGroups" [id]="getSegmentId(muscleGroup)"
                                 [value]="muscleGroup" (click)="scrollToMuscleGroup(muscleGroup)">
                 <ion-label>{{ muscleGroup }}</ion-label>
             </ion-segment-button>
@@ -18,11 +18,21 @@
 <ion-content [scrollEvents]="true" (ionScroll)="onExercisesScroll($event)" fullscreen
              [style]="scrollInProgress ? '--overflow: hidden' : ''">
     <div *ngFor="let muscleGroup of muscleGroups">
-        <ion-list-header mode="md" [id]="muscleGroup + 'ExId'">
+        <ion-list-header mode="md" [id]="getListHeaderId(muscleGroup)">
             <ion-label class="list-label">{{ muscleGroup }}</ion-label>
         </ion-list-header>
         <ion-list>
-            <app-exercise-item *ngFor="let exercise of exercises" [exercise]="exercise"></app-exercise-item>
+            <app-exercise-item *ngFor="let exercise of exercises"
+                               [exercise]="exercise"
+                               [selectable]="customWorkout != null"></app-exercise-item>
         </ion-list>
     </div>
 </ion-content>
+<ion-footer *ngIf="customWorkout != null" class="footer-button ion-no-border">
+    <div>
+        <ion-button class="dark-white" (click)="addSelectedToCustomWorkout()"
+                    [disabled]="getSelectedNumber() === 0">
+            Add Selected ({{ getSelectedNumber() }})
+        </ion-button>
+    </div>
+</ion-footer>

@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {CustomWorkoutService} from '../../../service/custom-workout.service';
+import {NavController} from '@ionic/angular';
+import {Workout} from '../../../model/workout.model';
 
 @Component({
     selector: 'app-custom-workout-list',
@@ -8,6 +10,17 @@ import {CustomWorkoutService} from '../../../service/custom-workout.service';
 })
 export class CustomWorkoutListComponent {
 
-    constructor(public customWorkoutService: CustomWorkoutService) {
+    constructor(public customWorkoutService: CustomWorkoutService,
+                private nav: NavController) {
+    }
+
+    addCustomWorkout() {
+        const newWorkout = new Workout();
+        newWorkout.name = 'My Workout';
+        newWorkout.duration = 15;
+        newWorkout.exercises = [];
+
+        const navigationState = {workout: newWorkout};
+        this.nav.navigateForward('/workout-custom-edit', {state: navigationState});
     }
 }

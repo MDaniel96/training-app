@@ -57,7 +57,20 @@ const routes: Routes = [
     },
     {
         path: 'workout-custom-edit',
-        component: WorkoutCustomEditPage
+        children: [
+            {
+                path: '',
+                component: WorkoutCustomEditPage
+            },
+            {
+                path: 'add-exercises',
+                component: ExercisePage
+            },
+            {
+                path: 'add-exercises-select',
+                component: ExerciseListPage
+            }
+        ]
     },
     {
         path: '',

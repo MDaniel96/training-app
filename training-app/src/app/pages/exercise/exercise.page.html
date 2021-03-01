@@ -1,51 +1,59 @@
-<ion-header [mode]="'md'" class="ion-no-border main-header">
-  <ion-toolbar>
-    <ion-buttons slot="end">
-      <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
-        <ion-icon name="search-outline" class="toolbar"></ion-icon>
-      </ion-button>
-      <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
-        <ion-icon name="options-outline" class="toolbar"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-    <ion-title>TRAINING APP</ion-title>
-  </ion-toolbar>
+<ion-header [mode]="'md'" class="ion-no-border" [ngClass]="!customWorkout ? 'main-header' : ''">
+    <ion-toolbar>
+        <ion-buttons *ngIf="customWorkout" slot="start">
+            <ion-back-button [icon]="isIos() ? 'chevron-back-outline' : 'arrow-back-outline'"></ion-back-button>
+        </ion-buttons>
+        <ion-title *ngIf="customWorkout" class="toolbar">Add Exercises</ion-title>
+        <ion-title *ngIf="!customWorkout">TRAINING APP</ion-title>
+        <ion-buttons slot="end">
+            <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+                <ion-icon name="search-outline" class="toolbar"></ion-icon>
+            </ion-button>
+            <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+                <ion-icon name="options-outline" class="toolbar"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-row>
-    <ion-col>
-      <app-exercise-tool-card
-              title="Bodyweight"
-              imageUrl="./assets/image/tools/bodyweight-img.jpg"
-      ></app-exercise-tool-card>
-    </ion-col>
-    <ion-col>
-      <app-exercise-tool-card
-              title="Gym"
-              imageUrl="./assets/image/tools/gym-img.jpg"
-      ></app-exercise-tool-card>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <app-exercise-tool-card
-              title="Street workout"
-              imageUrl="./assets/image/tools/streetworkout-img.jpg"
-      ></app-exercise-tool-card>
-    </ion-col>
-    <ion-col>
-      <ion-card [ngClass]="isIos() ? 'no-ripple' : ''"
-              class="ion-activatable ripple-parent">
-        <div class="more-tools-background">
-          <div><ion-icon name="add-outline"></ion-icon></div>
-          <img src="./assets/image/tools/more-tools-img.jpg" alt=""/>
-        </div>
-        <ion-card-header>
-          <ion-card-title>Add exercise</ion-card-title>
-        </ion-card-header>
-        <ion-ripple-effect></ion-ripple-effect>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-exercise-tool-card
+                    title="Bodyweight"
+                    imageUrl="./assets/image/tools/bodyweight-img.jpg"
+                    [customWorkout]="customWorkout"
+            ></app-exercise-tool-card>
+        </ion-col>
+        <ion-col>
+            <app-exercise-tool-card
+                    title="Gym"
+                    imageUrl="./assets/image/tools/gym-img.jpg"
+                    [customWorkout]="customWorkout"
+            ></app-exercise-tool-card>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <app-exercise-tool-card
+                    title="Street workout"
+                    imageUrl="./assets/image/tools/streetworkout-img.jpg"
+                    [customWorkout]="customWorkout"
+            ></app-exercise-tool-card>
+        </ion-col>
+        <ion-col>
+            <ion-card [ngClass]="isIos() ? 'no-ripple' : ''"
+                      class="ion-activatable ripple-parent">
+                <div class="more-tools-background">
+                    <div>
+                        <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                    <img src="./assets/image/tools/more-tools-img.jpg" alt=""/>
+                </div>
+                <ion-card-header>
+                    <ion-card-title>Add exercise</ion-card-title>
+                </ion-card-header>
+                <ion-ripple-effect></ion-ripple-effect>
+            </ion-card>
+        </ion-col>
+    </ion-row>
 </ion-content>
