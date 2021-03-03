@@ -1,0 +1,22 @@
+<ion-menu side="end" contentId="playlists">
+    <ion-header mode="md">
+        <ion-toolbar>
+            <img slot="start" class="title-img" src="./assets/icon/spotify-icon.png" alt="">
+            <ion-buttons slot="end">
+                <ion-button (click)="close()">
+                    <ion-icon icon="close-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-title>Select playlist</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content id="playlists">
+        <ion-list>
+            <ion-item *ngFor="let playlist of playlistService.getAll()" [href]="playlist.url"
+                      button detail="false">
+                <img slot="start" class="music-img" src="./assets/image/playlist/{{ playlist.image }}" alt="">
+                <ion-label>{{ playlist.title }}</ion-label>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>

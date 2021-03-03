@@ -1,4 +1,4 @@
-<ion-header [mode]="'md'" class="ion-no-border">
+<ion-header [mode]="'md'" class="ion-no-border detail-header">
     <hidenav-stretchheader (scroll)="resizeTitle($event)" header-height="96" init-expanded="true" no-border="true">
         <div #static style="width: 100%;">
             <ion-toolbar>
@@ -10,7 +10,7 @@
                     <ion-button *ngIf="custom" (click)="editWorkout()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
                         <ion-icon name="pencil" class="toolbar"></ion-icon>
                     </ion-button>
-                    <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+                    <ion-button (click)="showPlaylists()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
                         <ion-icon name="headset" class="toolbar"></ion-icon>
                     </ion-button>
                 </ion-buttons>
@@ -75,3 +75,4 @@
         <ion-button class="yellow">Start Workout</ion-button>
     </div>
 </ion-footer>
+<app-select-playlist-panel #selectPlaylist></app-select-playlist-panel>

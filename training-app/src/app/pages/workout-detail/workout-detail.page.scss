@@ -29,17 +29,17 @@
   }
 }
 
-ion-toolbar {
-  --background: var(--transparent);
-  color: white;
-  height: 20vh;
-  pointer-events: auto;
-}
-
-ion-header {
+ion-header.detail-header {
   width: 100vw;
   height: 30vh;
   pointer-events: none;
+
+  ion-toolbar {
+    --background: var(--transparent);
+    color: white;
+    height: 20vh;
+    pointer-events: auto;
+  }
 }
 
 hidenav-stretchheader {

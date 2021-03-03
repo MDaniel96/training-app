@@ -3,6 +3,7 @@ import {NavController, Platform} from '@ionic/angular';
 import {ExerciseService} from '../../service/exercise.service';
 import {Workout} from '../../model/workout.model';
 import {ActivatedRoute, Router} from '@angular/router';
+import {SelectPlaylistPanelComponent} from '../../components/panel/select-playlist-panel/select-playlist-panel.component';
 
 @Component({
     selector: 'app-workout-detail',
@@ -15,6 +16,8 @@ export class WorkoutDetailPage implements AfterViewInit {
     custom: boolean;
 
     @ViewChild('title') title: ElementRef;
+
+    @ViewChild('selectPlaylist') playlistPanel: SelectPlaylistPanelComponent;
 
     headerMaxHeight: number;
     titleDistance = 0;
@@ -56,6 +59,10 @@ export class WorkoutDetailPage implements AfterViewInit {
     editWorkout() {
         const navigationState = {workout: this.workout};
         this.nav.navigateForward('/workout-custom-edit', {state: navigationState});
+    }
+
+    showPlaylists() {
+        this.playlistPanel.open();
     }
 
     isIos(): boolean {
