@@ -54,6 +54,8 @@
   --footer-button-background-color: var(--trx-black-97);
   --footer-button-background-activated-color: var(--trx-black-90);
   --footer-button-font-color: white;
+
+  --app-title-linear-color: var(--black-linear);
 }
 
 /** Night mode **/
@@ -111,6 +113,8 @@ body.dark {
   --footer-button-background-color: var(--dark-white-97);
   --footer-button-background-activated-color: var(--white-60);
   --footer-button-font-color: black;
+
+  --app-title-linear-color: var(--trx-yellow-linear);
 }
 
 /** Only Android **/

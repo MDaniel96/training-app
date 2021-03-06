@@ -34,9 +34,13 @@
 .main-header {
   ion-title {
     font-size: 21px;
+    letter-spacing: 1px;
     font-family: 'Lora', serif;
     font-weight: bold;
-    color: var(--title-color);
+    background-image: var(--app-title-linear-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
   }
 
   ion-button {

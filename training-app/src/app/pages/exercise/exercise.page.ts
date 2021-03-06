@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Platform} from '@ionic/angular';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Workout} from '../../model/workout.model';
+import {ExerciseToolService} from '../../service/exercise-tool.service';
 
 @Component({
     selector: 'app-exercise',
@@ -15,7 +16,8 @@ export class ExercisePage {
 
     customWorkout: Workout;
 
-    constructor(private platform: Platform,
+    constructor(public exerciseToolService: ExerciseToolService,
+                private platform: Platform,
                 private route: ActivatedRoute,
                 private router: Router) {
         this.getWorkoutFromRoute();

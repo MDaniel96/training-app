@@ -1,13 +1,13 @@
-<ion-content fullscreen [scrollEvents]="true"
+<ion-content fullscreen [scrollEvents]="true" (ionScroll)="onListScroll($event)"
              hide-header [header]="header.el" [subHeader]="stickyHeader.el"> <!-- Fix: ion-slides fullscreen bug -->
     <ion-header [mode]="'md'" #header slot="fixed" class="main-header">
         <ion-toolbar>
             <ion-buttons slot="end">
                 <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
-                    <ion-icon name="options-outline"></ion-icon>
+                    <ion-icon name="options-outline" class="toolbar"></ion-icon>
                 </ion-button>
             </ion-buttons>
-            <ion-title>TRAINING APP</ion-title>
+            <ion-title>AD TRAINING</ion-title>
         </ion-toolbar>
         <ion-toolbar class="segment-toolbar">
             <ion-segment [(ngModel)]="selectedExerciseType" [class]="isIos() ? 'no-ripple-button' : ''" scrollable>

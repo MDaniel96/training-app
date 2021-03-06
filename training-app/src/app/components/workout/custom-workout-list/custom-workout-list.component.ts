@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {CustomWorkoutService} from '../../../service/custom-workout.service';
-import {NavController} from '@ionic/angular';
+import {NavController, Platform} from '@ionic/angular';
 import {Workout} from '../../../model/workout.model';
 
 @Component({
@@ -11,7 +11,8 @@ import {Workout} from '../../../model/workout.model';
 export class CustomWorkoutListComponent {
 
     constructor(public customWorkoutService: CustomWorkoutService,
-                private nav: NavController) {
+                private nav: NavController,
+                private platform: Platform) {
     }
 
     addCustomWorkout() {
@@ -22,5 +23,9 @@ export class CustomWorkoutListComponent {
 
         const navigationState = {workout: newWorkout};
         this.nav.navigateForward('/workout-custom-edit', {state: navigationState});
+    }
+
+    isIos(): boolean {
+        return this.platform.is('ios');
     }
 }

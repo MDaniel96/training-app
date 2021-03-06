@@ -107,4 +107,12 @@ export class WorkoutPage implements AfterViewInit {
             return this.exerciseTypes;
         }
     }
+
+    onListScroll(event: CustomEvent) {
+        const pageScrollTop = event.detail.scrollTop; // fix IOS scroll bounce
+        if (pageScrollTop <= 5) {
+            this.hideHeaderDirective.showHeader();
+            this.currentMuscleGroup = null;
+        }
+    }
 }
