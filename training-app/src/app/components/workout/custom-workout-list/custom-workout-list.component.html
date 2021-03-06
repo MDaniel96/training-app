@@ -1,5 +1,5 @@
 <ion-content fullscreen [scrollEvents]="true">
-    <br><br><br><br><br> <!-- Fix: ion-slides fullscreen bug -->
+    <br><br><br><br><br><br *ngIf="isIos()"> <!-- Fix: ion-slides fullscreen bug -->
     <ion-list *ngIf="customWorkoutService.getAll().length !== 0" lines="none">
         <app-custom-workout-item *ngFor="let workout of customWorkoutService.getAll()"
                                  [workout]="workout"

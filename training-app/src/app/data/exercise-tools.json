@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Bodyweight",
+    "image": "bodyweight-img.jpg"
+  },
+  {
+    "name": "Gym",
+    "image": "gym-img.jpg"
+  },
+  {
+    "name": "TRX",
+    "image": "trx-img.jpg"
+  },
+  {
+    "name": "Dumbbell",
+    "image": "dumbbell-img.jpg"
+  },
+  {
+    "name": "Medicine ball",
+    "image": "medicine-ball-img.jpg"
+  },
+  {
+    "name": "Stretch band",
+    "image": "stretch-band-img.jpg"
+  }
+]

@@ -2,6 +2,7 @@ import {Component, Input} from '@angular/core';
 import {NavController, Platform} from '@ionic/angular';
 import {pageSlideAnimation} from '../../../animations/page-slide.animation';
 import {Workout} from '../../../model/workout.model';
+import {ExerciseTool} from '../../../model/exercise-tool.model';
 
 @Component({
     selector: 'app-exercise-tool-card',
@@ -10,8 +11,7 @@ import {Workout} from '../../../model/workout.model';
 })
 export class ExerciseToolCardComponent {
 
-    @Input() title: string;
-    @Input() imageUrl: string;
+    @Input() exerciseTool: ExerciseTool;
 
     @Input() customWorkout: Workout;
 
