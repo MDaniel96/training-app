@@ -1,0 +1,20 @@
+ion-menu.side-panel {
+
+  ion-title {
+    font-size: 18px;
+  }
+
+  ion-content {
+
+    img {
+      width: 20px;
+      transform: rotate(-10deg);
+      filter: var(--img-white-to-black-filter);
+    }
+
+    ion-icon {
+      margin-left: 20px;
+      --ionicon-stroke-width: 40px;
+    }
+  }
+}

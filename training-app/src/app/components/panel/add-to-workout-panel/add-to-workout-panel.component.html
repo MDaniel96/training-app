@@ -1,0 +1,30 @@
+<ion-menu class="side-panel" side="end" menu-id="addToWorkout" contentId="addableWorkouts">
+    <ion-header mode="md">
+        <ion-toolbar>
+            <ion-buttons slot="end">
+                <ion-button (click)="close()">
+                    <ion-icon icon="close-outline"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+            <ion-title>Add to my workout</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content id="addableWorkouts">
+        <ion-list>
+            <ion-item (click)="createWorkout()" button detail="false" lines="none">
+                <ion-icon slot="start" name="add-outline"></ion-icon>
+                <ion-label>New workout</ion-label>
+            </ion-item>
+        </ion-list>
+        <ion-list *ngIf="customWorkouts.length !== 0">
+            <ion-item *ngFor="let workout of customWorkouts" (click)="addExerciseToWorkout(workout, true)"
+                      button detail="false">
+                <img slot="start" src="./assets/icon/dumbbell-icon.svg" alt="">
+                <ion-label>{{ workout.name }}</ion-label>
+            </ion-item>
+        </ion-list>
+        <div *ngIf="customWorkouts.length === 0" class="empty-list">
+            You have no custom workouts added yet.
+        </div>
+    </ion-content>
+</ion-menu>

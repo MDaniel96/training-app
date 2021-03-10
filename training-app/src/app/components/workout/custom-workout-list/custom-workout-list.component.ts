@@ -16,12 +16,7 @@ export class CustomWorkoutListComponent {
     }
 
     addCustomWorkout() {
-        const newWorkout = new Workout();
-        newWorkout.name = 'My Workout';
-        newWorkout.duration = 15;
-        newWorkout.exercises = [];
-
-        const navigationState = {workout: newWorkout};
+        const navigationState = {workout: new Workout()};
         this.nav.navigateForward('/workout-custom-edit', {state: navigationState});
     }
 

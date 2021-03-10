@@ -14,10 +14,11 @@ export class SelectPlaylistPanelComponent {
     }
 
     async open() {
-        await this.menu.open();
+        await this.menu.enable(true, 'select-playlist');
+        await this.menu.open('select-playlist');
     }
 
     async close() {
-        await this.menu.close();
+        await this.menu.close('select-playlist');
     }
 }

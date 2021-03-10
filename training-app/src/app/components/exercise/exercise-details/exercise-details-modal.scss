@@ -39,6 +39,8 @@
 
 .backdrop-no-scroll {
   ion-content {
-    --overflow: hidden;
+    // Fix iOS12 backdrop scroll
+    // Commented out because of side-panel scroll on iOS
+    //--overflow: hidden;
   }
 }
