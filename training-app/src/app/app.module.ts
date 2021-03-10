@@ -31,6 +31,7 @@ import {CustomWorkoutItemComponent} from './components/workout/custom-workout-it
 import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-edit.page';
 import {CustomAmountPopoverComponent} from './components/workout/custom-amount-popover/custom-amount-popover.component';
 import {SelectPlaylistPanelComponent} from './components/panel/select-playlist-panel/select-playlist-panel.component';
+import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-panel/add-to-workout-panel.component';
 
 @NgModule({
     imports: [
@@ -55,6 +56,7 @@ import {SelectPlaylistPanelComponent} from './components/panel/select-playlist-p
         CustomWorkoutItemComponent,
         CustomAmountPopoverComponent,
         SelectPlaylistPanelComponent,
+        AddToWorkoutPanelComponent,
         Tab1Page,
         Tab2Page,
         WorkoutPage,

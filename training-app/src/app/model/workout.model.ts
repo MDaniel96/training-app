@@ -1,11 +1,11 @@
 import {Exercise} from './exercise.model';
 
 export class Workout {
-    name: string;
+    name = 'My Workout';
     image: string;
-    duration: number;
+    duration = 15;
     type: string;
     muscleGroups: string;
     equipments: string;
-    exercises: Exercise[];
+    exercises: Exercise[] = [];
 }

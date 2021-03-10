@@ -149,3 +149,53 @@ ion-footer.footer-button {
     }
   }
 }
+
+ion-menu.side-panel {
+  --width: 75%;
+  --ion-background-color: transparent;
+
+  ion-header {
+    --ion-background-color: var(--side-modal-background-color);
+  }
+
+  ion-content {
+    --ion-background-color: var(--side-modal-background-color);
+
+    ion-list {
+      border-radius: var(--border-radius-4);
+      margin: 12px 12px 0 12px;
+      background-color: var(--list-background-color);
+      padding-top: 4px;
+      padding-bottom: 4px;
+
+      ion-item {
+        --padding-start: 0px;
+        --ion-background-color: var(--transparent);
+        --border-color: var(--list-item-border-color);
+        pointer-events: auto;
+
+        img {
+          width: 45px;
+          margin-left: 10px;
+          margin-right: 20px;
+          border-radius: var(--border-radius-4);
+        }
+
+        ion-label {
+          font-size: 15px;
+          font-weight: var(--font-weight-medium);
+          margin-top: 18px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
+}
+
+.menu-content-open {
+  pointer-events: all !important; // fix ion-menu scroll
+}
+
+.toast {
+  transform: translateY(-60px);
+}

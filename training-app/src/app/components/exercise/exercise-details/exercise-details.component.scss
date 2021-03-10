@@ -9,7 +9,7 @@ span {
 }
 
 video {
-  width: 100%;
+  max-width: 100%;
   border-radius: var(--border-radius-4);
 }
 
@@ -21,6 +21,23 @@ video {
   display: flex;
   flex-flow: column;
   color: var(--ion-text-color);
+}
+
+.fab-container {
+  position: relative;
+  text-align: center;
+
+  ion-fab-button {
+    width: 45px;
+    height: 45px;
+    --background: var(--trx-yellow-97);
+    --background-activated: var(--trx-yellow-97);
+
+    ion-icon {
+      color: var(--trx-black-100);
+      --ionicon-stroke-width: 50px;
+    }
+  }
 }
 
 .details-container {

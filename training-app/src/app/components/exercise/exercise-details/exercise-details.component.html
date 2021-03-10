@@ -1,9 +1,17 @@
 <span></span>
 <div class="wrapper">
-    <video [@fadeInState]='state' (loadeddata)="state = 'in'"
-           playsinline autoplay muted loop
-           [src]="'./assets/video/' + exercise.video">
-    </video>
+    <div class="fab-container">
+        <video [@fadeInState]='state' (loadeddata)="state = 'in'"
+               playsinline autoplay muted loop
+               [src]="'./assets/video/' + exercise.video">
+        </video>
+        <ion-fab [@fadeInState]='state' *ngIf="showSlides"
+                 horizontal="end" vertical="bottom" slot="fixed" edge>
+            <ion-fab-button (click)="addToCustomWorkout()">
+                <ion-icon name="add-outline"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+    </div>
     <ion-slides *ngIf="showSlides" pager="true">
         <ion-slide>
             <div class="details-container overflow">
@@ -32,3 +40,4 @@
         </ion-slide>
     </ion-slides>
 </div>
+<app-add-to-workout-panel *ngIf="showAddToWorkoutPanel" #addToWorkout [exercise]="exercise"></app-add-to-workout-panel>
