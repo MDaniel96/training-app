@@ -110,7 +110,7 @@ export class WorkoutPage implements AfterViewInit {
 
     onListScroll(event: CustomEvent) {
         const pageScrollTop = event.detail.scrollTop; // fix IOS scroll bounce
-        if (pageScrollTop <= 5) {
+        if (pageScrollTop <= 0) {
             this.hideHeaderDirective.showHeader();
             this.currentMuscleGroup = null;
         }

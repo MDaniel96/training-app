@@ -1,10 +1,20 @@
 <ion-card class="ion-activatable ripple-parent" [ngClass]="isIos() ? 'no-ripple' : ''">
     <ion-item (click)="selectWorkout()">
         <img slot="start" src="./assets/image/workouts/small/{{ workout.image }}" alt="">
-        <div class="duration" slot="end">{{ workout.duration }} min</div>
-        <div>
-            <ion-label class="ion-text-wrap">{{ workout.name }}</ion-label>
-            <ion-badge class="badge badge-gray">{{ workout.type }}</ion-badge>
+        <div class="flex-horizontal">
+            <div>
+                <span class="name">{{ workout.name }}</span>
+                <span class="duration">{{ workout.duration }} min</span>
+            </div>
+            <div>
+                <span>
+                    <ion-badge class="badge badge-gray">{{ workout.type }}</ion-badge>
+                </span>
+                <span class="intensity">
+                    <ion-icon *ngFor="let i of [].constructor(workout.intensity)" name="flame"></ion-icon>
+                    <ion-icon *ngFor="let i of [].constructor(3 - workout.intensity)" name="flame-outline"></ion-icon>
+                </span>
+            </div>
         </div>
     </ion-item>
     <ion-ripple-effect></ion-ripple-effect>
