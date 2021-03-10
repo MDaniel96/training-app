@@ -5,6 +5,7 @@ export class Workout {
     image: string;
     duration = 15;
     type: string;
+    intensity: number;
     muscleGroups: string;
     equipments: string;
     exercises: Exercise[] = [];

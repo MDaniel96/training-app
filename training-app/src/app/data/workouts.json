@@ -6,6 +6,7 @@
     "type": "STRENGTH",
     "muscleGroups": "Core, Upper Body",
     "equipments": "Med Ball, Dumbbell, Stretch band",
+    "intensity": 3,
     "exercises": [
       {
         "name": "Ab Rollups",
@@ -242,6 +243,7 @@
     "type": "CARDIO",
     "muscleGroups": "Lower Body, Core",
     "equipments": "Med Ball, Dumbbell",
+    "intensity": 2,
     "exercises": [
       {
         "name": "Ab Rollups",
@@ -382,6 +384,7 @@
     "type": "STRENGTH",
     "muscleGroups": "Arm, Upperbody",
     "equipments": "Pull-Up Bar, Med Ball, Dumbbell, valami meg",
+    "intensity": 1,
     "exercises": [
       {
         "name": "Ab Rollups",
@@ -522,6 +525,7 @@
     "type": "STRENGTH",
     "muscleGroups": "Arm",
     "equipments": "Pull-Up Bar, Med Ball, Dumbbell, valami meg",
+    "intensity": 3,
     "exercises": [
       {
         "name": "Ab Rollups",
@@ -562,6 +566,7 @@
     "type": "STRENGTH",
     "muscleGroups": "Upper Body, Lower Body, Core, Shoulder",
     "equipments": "Pull-Up Bar, Med Ball",
+    "intensity": 1,
     "exercises": [
       {
         "name": "Ab Rollups",
@@ -702,6 +707,7 @@
     "type": "CARDIO",
     "muscleGroups": "Upper Body, Lower Body, Core, Shoulder",
     "equipments": "Pull-Up Bar, Med Ball, Dumbbell",
+    "intensity": 2,
     "exercises": [
       {
         "name": "Ab Rollups",

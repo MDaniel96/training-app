@@ -29,19 +29,30 @@
 <ion-content hidenav-sh-content fullscreen>
     <ion-grid>
         <ion-row *ngIf="!custom">
-            <ion-col size="3">
+            <ion-col size="3.5">
                 <div class="card">
                     <div class="title">Duration</div>
                     <div class="content">{{workout.duration}} min</div>
                 </div>
             </ion-col>
-            <ion-col size="4.5">
+            <ion-col size="8.5">
                 <div class="card">
                     <div class="title">Muscle group</div>
                     <div class="content">{{workout.muscleGroups}}</div>
                 </div>
             </ion-col>
-            <ion-col size="4.5">
+            <ion-col size="3.5">
+                <div class="card">
+                    <div class="title">Intensity</div>
+                    <div class="content">
+                        <ion-icon *ngFor="let i of [].constructor(workout.intensity)"
+                                  name="flame"></ion-icon>
+                        <ion-icon *ngFor="let i of [].constructor(3 - workout.intensity)"
+                                  name="flame-outline"></ion-icon>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="8.5">
                 <div class="card">
                     <div class="title">Equipment</div>
                     <div class="content">{{workout.equipments}}</div>

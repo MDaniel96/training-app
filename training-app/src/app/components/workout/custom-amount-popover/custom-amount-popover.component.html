@@ -2,7 +2,8 @@
     <div class="padding">
         <div class="ion-padding-top title">Set {{ getTitle() }}</div>
         <ion-item class="ion-padding-bottom" mode="ios">
-            <ion-input #amountInput type="number" min="1" [value]="exerciseType === 'INTERVAL' ? 30 : 15"></ion-input>
+            <ion-input #amountInput type="number" inputmode="numeric" min="1"
+                       [value]="exerciseType === 'INTERVAL' ? 30 : 15"></ion-input>
             <span>{{ getMetrics() }}</span>
         </ion-item>
         <span style="float: left;" class="popover-button ion-activatable ripple-parent" (click)="closePopover()">Cancel
