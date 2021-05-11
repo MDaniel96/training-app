@@ -4,7 +4,7 @@
             <ion-back-button [icon]="isIos() ? 'chevron-back-outline' : 'arrow-back-outline'">
             </ion-back-button>
         </ion-buttons>
-        <ion-title>Gym</ion-title>
+        <ion-title>{{tool}}</ion-title>
     </ion-toolbar>
     <ion-toolbar class="segment-toolbar">
         <ion-segment [(ngModel)]="selectedMuscleGroup" [class]="isIos() ? 'no-ripple-button' : ''" scrollable>
@@ -22,7 +22,7 @@
             <ion-label class="list-label">{{ muscleGroup }}</ion-label>
         </ion-list-header>
         <ion-list>
-            <app-exercise-item *ngFor="let exercise of exercises"
+            <app-exercise-item *ngFor="let exercise of getExercisesForMuscleGroup(muscleGroup)"
                                [exercise]="exercise"
                                [selectable]="customWorkout != null"></app-exercise-item>
         </ion-list>

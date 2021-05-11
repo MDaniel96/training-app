@@ -9,11 +9,14 @@ import {Tab5Page} from './pages/tab5/tab5.page';
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
 import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
 import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-edit.page';
+import {WorkoutResolver} from './service/workout.resolver';
+import {ExerciseToolResolver} from './service/exercise-tool.resolver';
 
 const routes: Routes = [
     {
         path: 'tabs',
         component: TabsComponent,
+        resolve: [ExerciseToolResolver],
         children: [
             {
                 path: 'my-plan',
@@ -25,7 +28,8 @@ const routes: Routes = [
             },
             {
                 path: 'workouts',
-                component: WorkoutPage
+                component: WorkoutPage,
+                resolve: [WorkoutResolver]
             },
             {
                 path: 'exercises',
@@ -35,7 +39,7 @@ const routes: Routes = [
                         component: ExercisePage
                     },
                     {
-                        path: 'gym',
+                        path: ':tool/list',
                         component: ExerciseListPage
                     }
                 ]

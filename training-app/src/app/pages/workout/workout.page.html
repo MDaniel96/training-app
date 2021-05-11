@@ -27,8 +27,9 @@
     <ion-slides #slider (ionSlideWillChange)="beforeExerciseTypeSlide()" (ionSlideDidChange)="onExerciseTypeSlide()"
                 *ngIf="showSlides">
         <ion-slide *ngFor="let exerciseType of exerciseTypes">
-            <app-workout-list *ngIf="exerciseType !== 'custom' && isWorkoutListLoaded(exerciseType)"
+            <app-workout-list *ngIf="exerciseType !== 'custom'"
                               (currentMuscleGroup)="currentMuscleGroupChanged($event)"
+                              [exerciseType]="exerciseType"
             ></app-workout-list>
             <app-custom-workout-list *ngIf="exerciseType === 'custom'"></app-custom-workout-list>
         </ion-slide>

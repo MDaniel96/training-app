@@ -1,22 +1,23 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, OnDestroy, ViewChild} from '@angular/core';
 import {ExerciseService} from '../../service/exercise.service';
 import {Exercise} from '../../model/exercise.model';
 import {IonContent, IonHeader, NavController, Platform, ViewDidLeave} from '@ionic/angular';
 import {ActivatedRoute, Router} from '@angular/router';
 import {cloneDeep} from 'lodash';
 import {Workout} from '../../model/workout.model';
+import {Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-exercise-list',
     templateUrl: './exercise-list.page.html',
     styleUrls: ['./exercise-list.page.scss'],
 })
-export class ExerciseListPage implements ViewDidLeave {
+export class ExerciseListPage implements ViewDidLeave, OnDestroy {
 
     @ViewChild(IonContent) content: IonContent;
     @ViewChild(IonHeader) header: IonHeader;
 
-    exercises: Exercise[];
+    exercises: Exercise[] = [];
 
     muscleGroups = ['abs', 'chest', 'shoulder', 'biceps', 'leg'];
     selectedMuscleGroup = 'abs';
@@ -25,12 +26,22 @@ export class ExerciseListPage implements ViewDidLeave {
 
     customWorkout: Workout;
 
+    tool: string;
+
+    routerSub: Subscription;
+
     constructor(private exerciseService: ExerciseService,
                 private platform: Platform,
                 private route: ActivatedRoute,
                 private router: Router,
                 private nav: NavController) {
-        this.exercises = exerciseService.getAll();
+        exerciseService.getAll().subscribe(exercises => {
+            this.exercises = exercises;
+            this.routerSub = this.route.params.subscribe(params => {
+                this.tool = params.tool;
+                this.exercises = this.exercises.filter(exercise => exercise.equipments.find(equipment => equipment === this.tool));
+            });
+        });
         this.getWorkoutFromRoute();
     }
 
@@ -112,5 +123,13 @@ export class ExerciseListPage implements ViewDidLeave {
 
     isIos(): boolean {
         return this.platform.is('ios');
+    }
+
+    getExercisesForMuscleGroup(muscleGroup: string): Exercise[] {
+        return this.exercises.filter(e => e.muscleGroups.indexOf(muscleGroup) > -1);
+    }
+
+    ngOnDestroy() {
+        this.routerSub.unsubscribe();
     }
 }

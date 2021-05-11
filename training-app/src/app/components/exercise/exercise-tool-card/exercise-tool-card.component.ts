@@ -25,7 +25,7 @@ export class ExerciseToolCardComponent {
 
     selectTool() {
         if (!this.customWorkout) {
-            this.nav.navigateForward('/tabs/exercises/gym', this.isIos() ? {} : {animation: pageSlideAnimation});
+            this.nav.navigateForward(`/tabs/exercises/${this.exerciseTool.name}/list`, this.isIos() ? {} : {animation: pageSlideAnimation});
         } else {
             const navigationState = {workout: this.customWorkout};
             this.nav.navigateForward('/workout-custom-edit/add-exercises-select',

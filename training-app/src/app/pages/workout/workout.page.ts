@@ -2,6 +2,7 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {IonSlides, Platform} from '@ionic/angular';
 import {HideHeaderDirective} from '../../directives/hide-header.directive';
 import {fadeInStateAnimation} from '../../animations/fade-in.animation';
+import {ExerciseToolService} from '../../service/exercise-tool.service';
 
 @Component({
     selector: 'app-workout',
@@ -15,7 +16,7 @@ export class WorkoutPage implements AfterViewInit {
 
     @ViewChild(HideHeaderDirective) hideHeaderDirective: HideHeaderDirective;
 
-    exerciseTypes = ['bodyweight', 'gym', 'basic', 'trx'];
+    exerciseTypes = [];
     selectedExerciseType = 'bodyweight';
 
     loadedExerciseTypes = ['bodyweight'];
@@ -25,8 +26,8 @@ export class WorkoutPage implements AfterViewInit {
 
     showSlides = false;
 
-    constructor(private platform: Platform) {
-        this.preLoadWorkoutLists();
+    constructor(private platform: Platform, private equipmentService: ExerciseToolService) {
+        this.exerciseTypes = equipmentService.exerciseTools.map(m => m.name);
     }
 
     slideToExerciseType(id: string) {

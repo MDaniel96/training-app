@@ -5,7 +5,8 @@
             <ion-label class="list-label">{{ muscleGroup }}</ion-label>
         </ion-list-header>
         <ion-list lines="none">
-            <app-workout-item *ngFor="let workout of workouts" [workout]="workout"></app-workout-item>
+            <app-workout-item *ngFor="let workout of getWorkoutsForMuscleGroup(muscleGroup)"
+                              [workout]="workout"></app-workout-item>
         </ion-list>
     </div>
 </ion-content>

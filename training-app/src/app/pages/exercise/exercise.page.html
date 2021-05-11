@@ -17,7 +17,7 @@
 </ion-header>
 <ion-content [fullscreen]="true">
     <ion-row>
-        <ion-col *ngFor="let exerciseTool of exerciseToolService.getAll()" size="6">
+        <ion-col *ngFor="let exerciseTool of tools" size="6">
             <app-exercise-tool-card
                     [exerciseTool]="exerciseTool"
                     [customWorkout]="customWorkout"

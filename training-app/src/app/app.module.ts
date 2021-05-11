@@ -32,6 +32,7 @@ import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-
 import {CustomAmountPopoverComponent} from './components/workout/custom-amount-popover/custom-amount-popover.component';
 import {SelectPlaylistPanelComponent} from './components/panel/select-playlist-panel/select-playlist-panel.component';
 import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-panel/add-to-workout-panel.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -39,6 +40,7 @@ import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-pane
         IonicModule.forRoot(),
         IonicModule,
         CommonModule,
+        HttpClientModule,
         FormsModule,
         AppPageRoutingModule,
         BrowserAnimationsModule,

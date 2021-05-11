@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Workout} from '../../../model/workout.model';
 import {WorkoutService} from '../../../service/workout.service';
 
@@ -7,16 +7,21 @@ import {WorkoutService} from '../../../service/workout.service';
     templateUrl: './workout-list.component.html',
     styleUrls: ['./workout-list.component.scss'],
 })
-export class WorkoutListComponent {
+export class WorkoutListComponent implements OnInit {
 
     @Output() currentMuscleGroup = new EventEmitter<string>();
 
-    workouts: Workout[];
+    @Input() exerciseType: string;
+
+    workouts: Workout[] = [];
 
     muscleGroups = ['abs', 'chest', 'shoulder', 'biceps', 'leg'];
 
     constructor(private workoutService: WorkoutService) {
-        this.workouts = workoutService.getAll();
+    }
+
+    ngOnInit() {
+        this.workouts = this.workoutService.workouts.filter(workout => workout.equipments.includes(this.exerciseType));
     }
 
     onWorkoutsScroll(event: CustomEvent) {
@@ -34,5 +39,9 @@ export class WorkoutListComponent {
 
     getOffsetTop(id: string): number {
         return document.getElementById(id).offsetTop;
+    }
+
+    getWorkoutsForMuscleGroup(muscleGroup: string): Workout[] {
+        return this.workouts.filter(w => w.muscleGroups.includes(muscleGroup));
     }
 }
