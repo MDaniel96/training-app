@@ -35,12 +35,10 @@ export class ExerciseListPage implements ViewDidLeave, OnDestroy {
                 private route: ActivatedRoute,
                 private router: Router,
                 private nav: NavController) {
-        exerciseService.getAll().subscribe(exercises => {
-            this.exercises = exercises;
-            this.routerSub = this.route.params.subscribe(params => {
-                this.tool = params.tool;
-                this.exercises = this.exercises.filter(exercise => exercise.equipments.find(equipment => equipment === this.tool));
-            });
+        this.exercises = this.exerciseService.exercises;
+        this.routerSub = this.route.params.subscribe(params => {
+            this.tool = params.tool;
+            this.exercises = this.exercises.filter(exercise => exercise.equipments.find(equipment => equipment === this.tool));
         });
         this.getWorkoutFromRoute();
     }

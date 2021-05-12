@@ -44,6 +44,7 @@ export class AddToWorkoutPanelComponent {
         exerciseToAdd.type = 'INTERVAL';
         exerciseToAdd.amount = 30;
         workout.exercises.push(exerciseToAdd);
+        this.customWorkoutService.save(workout);
         this.modalController.dismiss();
         if (showToast) {
             this.showToast(`Added to ${workout.name}`);

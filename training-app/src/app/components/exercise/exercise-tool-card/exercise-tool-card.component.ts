@@ -28,7 +28,7 @@ export class ExerciseToolCardComponent {
             this.nav.navigateForward(`/tabs/exercises/${this.exerciseTool.name}/list`, this.isIos() ? {} : {animation: pageSlideAnimation});
         } else {
             const navigationState = {workout: this.customWorkout};
-            this.nav.navigateForward('/workout-custom-edit/add-exercises-select',
+            this.nav.navigateForward(`/workout-custom-edit/${this.exerciseTool.name}/add-exercises-select`,
                 this.isIos() ? {state: navigationState} : {state: navigationState, animation: pageSlideAnimation}
             );
         }

@@ -33,6 +33,7 @@ import {CustomAmountPopoverComponent} from './components/workout/custom-amount-p
 import {SelectPlaylistPanelComponent} from './components/panel/select-playlist-panel/select-playlist-panel.component';
 import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-panel/add-to-workout-panel.component';
 import {HttpClientModule} from '@angular/common/http';
+import {IonicStorageModule} from '@ionic/storage-angular';
 
 @NgModule({
     imports: [
@@ -44,7 +45,8 @@ import {HttpClientModule} from '@angular/common/http';
         FormsModule,
         AppPageRoutingModule,
         BrowserAnimationsModule,
-        HidenavModule
+        HidenavModule,
+        IonicStorageModule.forRoot()
     ],
     declarations: [
         AppComponent,

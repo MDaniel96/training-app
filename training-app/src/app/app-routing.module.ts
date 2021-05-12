@@ -11,12 +11,13 @@ import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
 import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-edit.page';
 import {WorkoutResolver} from './service/workout.resolver';
 import {ExerciseToolResolver} from './service/exercise-tool.resolver';
+import {ExerciseResolver} from './service/exercise.resolver';
 
 const routes: Routes = [
     {
         path: 'tabs',
         component: TabsComponent,
-        resolve: [ExerciseToolResolver],
+        resolve: [ExerciseToolResolver, ExerciseResolver],
         children: [
             {
                 path: 'my-plan',
@@ -61,6 +62,7 @@ const routes: Routes = [
     },
     {
         path: 'workout-custom-edit',
+        resolve: [ExerciseToolResolver, ExerciseResolver],
         children: [
             {
                 path: '',
@@ -71,7 +73,7 @@ const routes: Routes = [
                 component: ExercisePage
             },
             {
-                path: 'add-exercises-select',
+                path: ':tool/add-exercises-select',
                 component: ExerciseListPage
             }
         ]
