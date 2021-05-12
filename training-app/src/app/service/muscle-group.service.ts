@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {environment} from '../../environments/environment';
 
 @Injectable({providedIn: 'root'})
 export class MuscleGroupService {
@@ -8,6 +9,6 @@ export class MuscleGroupService {
     }
 
     fetchMuscleGroups() {
-        return this.http.get<{ name: string }[]>('http://localhost:8080/training-app/api/muscle-groups/');
+        return this.http.get<{ name: string }[]>(`${environment.SERVER_URL}/equipments`);
     }
 }

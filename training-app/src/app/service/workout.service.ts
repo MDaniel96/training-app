@@ -4,11 +4,10 @@ import {Workout} from '../model/workout.model';
 import {HttpClient} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
 import {Observable, throwError} from 'rxjs';
+import {environment} from '../../environments/environment';
 
 @Injectable({providedIn: 'root'})
 export class WorkoutService {
-
-    URL = 'http://localhost:8080/training-app/api/workouts';
 
     workouts: Workout[];
 
@@ -17,7 +16,7 @@ export class WorkoutService {
     }
 
     getAll(): Observable<Workout[]> {
-        return this.http.get<Workout[]>(this.URL)
+        return this.http.get<Workout[]>(`${environment.SERVER_URL}/workouts`)
             .pipe(
                 tap(result => this.workouts = result),
                 catchError(err => {
