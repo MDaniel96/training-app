@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Recommended",
+    "description": "These workouts are recommended for you based on your preferences.",
+    "plans": [
+      {
+        "name": "Six Pack Abs For Summer",
+        "image": "workout-img-4.png",
+        "duration": 8,
+        "intensity": 2
+      },
+      {
+        "name": "Best Exercises With TRX",
+        "image": "workout-img-5.png",
+        "duration": 10,
+        "intensity": 3
+      }
+    ]
+  },
+  {
+    "title": "Gain muscle at home",
+    "description": "Collection of strength workout plans which need no equipment so you can perform easily them at home in small spaces.",
+    "plans": [
+      {
+        "name": "Perfect Full Body For Beginners",
+        "image": "workout-img-1.png",
+        "duration": 6,
+        "intensity": 1
+      },
+      {
+        "name": "Advanced Home Plan",
+        "image": "workout-img-2.png",
+        "duration": 8,
+        "intensity": 2
+      },
+      {
+        "name": "Best Exercises With TRX",
+        "image": "workout-img-3.png",
+        "duration": 8,
+        "intensity": 2
+      },
+      {
+        "name": "Best Exercises With TRX",
+        "image": "workout-img-4.png",
+        "duration": 10,
+        "intensity": 3
+      }
+    ]
+  },
+  {
+    "title": "Loose weight at home",
+    "description": "Collection of cardio workout plans which need no equipment so you can perform easily them at home in small spaces.",
+    "plans": [
+      {
+        "name": "Runners Routine",
+        "image": "workout-img-6.png",
+        "duration": 8,
+        "intensity": 2
+      },
+      {
+        "name": "Get Fit In 4 Weeks",
+        "image": "workout-img-5.png",
+        "duration": 4,
+        "intensity": 1
+      },
+      {
+        "name": "Best Exercises With TRX",
+        "image": "workout-img-4.png",
+        "duration": 8,
+        "intensity": 2
+      }
+    ]
+  },
+  {
+    "title": "Hit the gym",
+    "description": "Group of workout plans which need some equipment so you should hit the gym or use your own tools.",
+    "plans": [
+      {
+        "name": "Gain Muscle",
+        "image": "workout-img-2.png",
+        "duration": 8,
+        "intensity": 2
+      }
+    ]
+  }
+]

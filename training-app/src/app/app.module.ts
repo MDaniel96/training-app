@@ -10,7 +10,7 @@ import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {Tab1Page} from './pages/tab1/tab1.page';
-import {Tab2Page} from './pages/tab2/tab2.page';
+import {PlanPage} from './pages/plan/plan.page';
 import {WorkoutPage} from './pages/workout/workout.page';
 import {TabsComponent} from './components/tabs/tabs.component';
 import {AppPageRoutingModule} from './app-routing.module';
@@ -32,6 +32,7 @@ import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-
 import {CustomAmountPopoverComponent} from './components/workout/custom-amount-popover/custom-amount-popover.component';
 import {SelectPlaylistPanelComponent} from './components/panel/select-playlist-panel/select-playlist-panel.component';
 import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-panel/add-to-workout-panel.component';
+import {PlanItemComponent} from './components/plan/plan-item/plan-item.component';
 
 @NgModule({
     imports: [
@@ -57,8 +58,9 @@ import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-pane
         CustomAmountPopoverComponent,
         SelectPlaylistPanelComponent,
         AddToWorkoutPanelComponent,
+        PlanItemComponent,
         Tab1Page,
-        Tab2Page,
+        PlanPage,
         WorkoutPage,
         WorkoutDetailPage,
         WorkoutCustomEditPage,

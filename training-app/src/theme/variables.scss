@@ -25,6 +25,8 @@
   --card-title-color: black;
 
   --list-header-color: black;
+  --list-header-plan-color: black;
+  --list-subheader-color: var(--trx-black-100);
   --list-background-color: var(--trx-black-10);
   --list-item-border-color: white;
 
@@ -86,6 +88,8 @@ body.dark {
   --card-title-color: white;
 
   --list-header-color: var(--trx-yellow-75);
+  --list-header-plan-color: var(--trx-yellow-100);
+  --list-subheader-color: var(--white-80);
   --list-background-color: var(--white-6);
   --list-item-border-color: var(--white-25);
 
