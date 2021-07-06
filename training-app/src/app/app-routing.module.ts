@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {TabsComponent} from './components/tabs/tabs.component';
 import {Tab1Page} from './pages/tab1/tab1.page';
-import {Tab2Page} from './pages/tab2/tab2.page';
+import {PlanPage} from './pages/plan/plan.page';
 import {WorkoutPage} from './pages/workout/workout.page';
 import {ExercisePage} from './pages/exercise/exercise.page';
 import {Tab5Page} from './pages/tab5/tab5.page';
@@ -21,7 +21,7 @@ const routes: Routes = [
             },
             {
                 path: 'plans',
-                component: Tab2Page
+                component: PlanPage
             },
             {
                 path: 'workouts',
@@ -74,7 +74,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/tabs/workouts',
+        redirectTo: '/tabs/plans',
         pathMatch: 'full'
     }
 ];

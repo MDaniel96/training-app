@@ -1,0 +1,25 @@
+<ion-header [mode]="'md'" class="main-header">
+    <ion-toolbar>
+        <ion-buttons slot="end">
+            <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+                <ion-icon name="options-outline" class="toolbar"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>AD TRAINING</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <div class="plan-container">
+        <div *ngFor="let planGroup of planService.getPlanGroups()">
+            <div class="plan-header">
+                <div>{{ planGroup.title }}</div>
+                <span>{{ planGroup.description }}</span>
+            </div>
+            <ion-slides *ngIf="showSlides" [options]="slideOptions">
+                <ion-slide *ngFor="let plan of planGroup.plans">
+                    <app-plan-item [plan]="plan"></app-plan-item>
+                </ion-slide>
+            </ion-slides>
+        </div>
+    </div>
+</ion-content>

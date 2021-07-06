@@ -1,6 +1,5 @@
-<ion-card [ngClass]="isIos() ? 'no-ripple' : ''"
-          (click)="selectTool()"
-          class="ion-activatable ripple-parent">
+<ion-card [ngClass]="isIos() ? 'no-ripple' : ''" class="ion-activatable ripple-parent"
+          (click)="selectTool()">
     <img src="./assets/image/tools/{{ exerciseTool.image }}" alt="">
     <ion-card-header>
         <ion-card-title>{{ exerciseTool.name }}</ion-card-title>
