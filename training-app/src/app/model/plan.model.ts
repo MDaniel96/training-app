@@ -1,6 +1,6 @@
 export class Plan {
     name: string;
     image: string;
-    duration: number;
+    numberOfWeeks: number;
     intensity: number;
 }

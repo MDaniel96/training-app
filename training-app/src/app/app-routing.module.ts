@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {TabsComponent} from './components/tabs/tabs.component';
-import {Tab1Page} from './pages/tab1/tab1.page';
+import {MyPlanPage} from './pages/my-plan/my-plan.page';
 import {PlanPage} from './pages/plan/plan.page';
 import {WorkoutPage} from './pages/workout/workout.page';
 import {ExercisePage} from './pages/exercise/exercise.page';
@@ -17,7 +17,7 @@ const routes: Routes = [
         children: [
             {
                 path: 'my-plan',
-                component: Tab1Page
+                component: MyPlanPage
             },
             {
                 path: 'plans',
@@ -74,7 +74,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/tabs/plans',
+        redirectTo: '/tabs/my-plan',
         pathMatch: 'full'
     }
 ];
