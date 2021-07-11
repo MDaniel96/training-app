@@ -6,13 +6,13 @@
       {
         "name": "Six Pack Abs For Summer",
         "image": "workout-img-4.png",
-        "duration": 8,
+        "numberOfWeeks": 8,
         "intensity": 2
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-5.png",
-        "duration": 10,
+        "numberOfWeeks": 10,
         "intensity": 3
       }
     ]
@@ -24,25 +24,25 @@
       {
         "name": "Perfect Full Body For Beginners",
         "image": "workout-img-1.png",
-        "duration": 6,
+        "numberOfWeeks": 6,
         "intensity": 1
       },
       {
         "name": "Advanced Home Plan",
         "image": "workout-img-2.png",
-        "duration": 8,
+        "numberOfWeeks": 8,
         "intensity": 2
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-3.png",
-        "duration": 8,
+        "numberOfWeeks": 8,
         "intensity": 2
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-4.png",
-        "duration": 10,
+        "numberOfWeeks": 10,
         "intensity": 3
       }
     ]
@@ -54,19 +54,19 @@
       {
         "name": "Runners Routine",
         "image": "workout-img-6.png",
-        "duration": 8,
+        "numberOfWeeks": 8,
         "intensity": 2
       },
       {
         "name": "Get Fit In 4 Weeks",
         "image": "workout-img-5.png",
-        "duration": 4,
+        "numberOfWeeks": 4,
         "intensity": 1
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-4.png",
-        "duration": 8,
+        "numberOfWeeks": 8,
         "intensity": 2
       }
     ]
@@ -78,7 +78,7 @@
       {
         "name": "Gain Muscle",
         "image": "workout-img-2.png",
-        "duration": 8,
+        "numberOfWeeks": 8,
         "intensity": 2
       }
     ]

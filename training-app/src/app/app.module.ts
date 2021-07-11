@@ -9,7 +9,7 @@ import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {AppComponent} from './app.component';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {Tab1Page} from './pages/tab1/tab1.page';
+import {MyPlanPage} from './pages/my-plan/my-plan.page';
 import {PlanPage} from './pages/plan/plan.page';
 import {WorkoutPage} from './pages/workout/workout.page';
 import {TabsComponent} from './components/tabs/tabs.component';
@@ -33,6 +33,7 @@ import {CustomAmountPopoverComponent} from './components/workout/custom-amount-p
 import {SelectPlaylistPanelComponent} from './components/panel/select-playlist-panel/select-playlist-panel.component';
 import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-panel/add-to-workout-panel.component';
 import {PlanItemComponent} from './components/plan/plan-item/plan-item.component';
+import {NgCircleProgressModule} from 'ng-circle-progress';
 
 @NgModule({
     imports: [
@@ -43,7 +44,8 @@ import {PlanItemComponent} from './components/plan/plan-item/plan-item.component
         FormsModule,
         AppPageRoutingModule,
         BrowserAnimationsModule,
-        HidenavModule
+        HidenavModule,
+        NgCircleProgressModule.forRoot()
     ],
     declarations: [
         AppComponent,
@@ -59,7 +61,7 @@ import {PlanItemComponent} from './components/plan/plan-item/plan-item.component
         SelectPlaylistPanelComponent,
         AddToWorkoutPanelComponent,
         PlanItemComponent,
-        Tab1Page,
+        MyPlanPage,
         PlanPage,
         WorkoutPage,
         WorkoutDetailPage,

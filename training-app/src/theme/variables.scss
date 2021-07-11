@@ -60,6 +60,9 @@
   --app-title-linear-color: var(--black-linear);
 
   --side-modal-background-color: var(--white-93);
+
+  --plan-day-number-circle-color: var(--white-80);
+  --plan-day-completion-icon-opacity: 0.65;
 }
 
 /** Night mode **/
@@ -123,6 +126,9 @@ body.dark {
   --app-title-linear-color: var(--trx-yellow-linear);
 
   --side-modal-background-color: var(--trx-black-95);
+
+  --plan-day-number-circle-color: var(--white-15);
+  --plan-day-completion-icon-opacity: 0.9;
 }
 
 /** Only Android **/
