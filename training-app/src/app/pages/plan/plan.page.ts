@@ -1,6 +1,8 @@
 import {AfterViewInit, Component} from '@angular/core';
-import {Platform} from '@ionic/angular';
+import {NavController, Platform} from '@ionic/angular';
 import {PlanService} from '../../service/plan.service';
+import {PlanGroup} from '../../model/plan-group.model';
+import {pageSlideAnimation} from '../../animations/page-slide.animation';
 
 @Component({
     selector: 'app-plan',
@@ -16,7 +18,15 @@ export class PlanPage implements AfterViewInit {
     };
 
     constructor(public planService: PlanService,
-                private platform: Platform) {
+                private platform: Platform,
+                private nav: NavController) {
+    }
+
+    selectPlanGroup(group: PlanGroup) {
+        const navigationState = {planGroup: group};
+        this.nav.navigateForward('tabs/plans/plan-group',
+            this.isIos() ? {state: navigationState} : {state: navigationState, animation: pageSlideAnimation}
+        );
     }
 
     isIos(): boolean {

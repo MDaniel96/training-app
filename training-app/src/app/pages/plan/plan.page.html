@@ -12,8 +12,15 @@
     <div class="plan-container">
         <div *ngFor="let planGroup of planService.getPlanGroups()">
             <div class="plan-header">
-                <div>{{ planGroup.title }}</div>
-                <span>{{ planGroup.description }}</span>
+                <div class="plan-title">
+                    <div>{{ planGroup.title }}</div>
+                    <span class="ion-activatable ripple-parent" style="position: relative"
+                          (click)="selectPlanGroup(planGroup)">
+                        View All
+                        <ion-ripple-effect></ion-ripple-effect>
+                    </span>
+                </div>
+                <div class="description">{{ planGroup.description }}</div>
             </div>
             <ion-slides *ngIf="showSlides" [options]="slideOptions">
                 <ion-slide *ngFor="let plan of planGroup.plans">

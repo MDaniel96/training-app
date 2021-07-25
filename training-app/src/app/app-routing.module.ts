@@ -9,6 +9,7 @@ import {Tab5Page} from './pages/tab5/tab5.page';
 import {ExerciseListPage} from './pages/exercise-list/exercise-list.page';
 import {WorkoutDetailPage} from './pages/workout-detail/workout-detail.page';
 import {WorkoutCustomEditPage} from './pages/workout-custom-edit/workout-custom-edit.page';
+import {PlanGroupPage} from './pages/plan-group/plan-group.page';
 
 const routes: Routes = [
     {
@@ -21,7 +22,16 @@ const routes: Routes = [
             },
             {
                 path: 'plans',
-                component: PlanPage
+                children: [
+                    {
+                        path: '',
+                        component: PlanPage
+                    },
+                    {
+                        path: 'plan-group',
+                        component: PlanGroupPage
+                    }
+                ]
             },
             {
                 path: 'workouts',
