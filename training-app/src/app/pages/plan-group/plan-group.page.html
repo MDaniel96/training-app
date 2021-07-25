@@ -1,0 +1,14 @@
+<ion-header [mode]="'md'">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button [icon]="isIos() ? 'chevron-back-outline' : 'arrow-back-outline'">
+            </ion-back-button>
+        </ion-buttons>
+        <ion-title>{{ planGroup.title }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <ion-list>
+        <app-plan-item *ngFor="let plan of planGroup.plans" [plan]="plan"></app-plan-item>
+    </ion-list>
+</ion-content>
