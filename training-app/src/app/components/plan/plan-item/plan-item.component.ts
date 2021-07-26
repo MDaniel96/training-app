@@ -1,6 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Plan} from '../../../model/plan.model';
-import {Platform} from '@ionic/angular';
+import {NavController, Platform} from '@ionic/angular';
+import {pageSlideAnimation} from '../../../animations/page-slide.animation';
 
 @Component({
     selector: 'app-plan-item',
@@ -11,10 +12,15 @@ export class PlanItemComponent {
 
     @Input() plan: Plan;
 
-    constructor(private platform: Platform) {
+    constructor(private platform: Platform,
+                private nav: NavController) {
     }
 
     selectPlan() {
+        const navigationState = {plan: this.plan};
+        this.nav.navigateForward('/plan-detail',
+            this.isIos() ? {state: navigationState} : {state: navigationState, animation: pageSlideAnimation}
+        );
     }
 
     isIos(): boolean {

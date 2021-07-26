@@ -1,0 +1,104 @@
+<ion-header [mode]="'md'" class="ion-no-border">
+    <hidenav-stretchheader (scroll)="resizeTitle($event)" header-height="96" init-expanded="true" no-border="true">
+        <div #static style="width: 100%;">
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-back-button [icon]="isIos() ? 'chevron-back-outline' : 'arrow-back-outline'">
+                    </ion-back-button>
+                </ion-buttons>
+                <div class="title"><span #title>{{plan.name}}</span></div>
+            </ion-toolbar>
+        </div>
+        <div #shrinkexpand>
+            <div class="image-container">
+                <img [src]="'./assets/image/workouts/large/' + plan.image" alt="workout">
+                <div class="backdrop"></div>
+            </div>
+        </div>
+    </hidenav-stretchheader>
+</ion-header>
+<ion-content hidenav-sh-content fullscreen>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="3.5">
+                <div class="info-card">
+                    <div class="title">Length</div>
+                    <div class="content">{{plan.numberOfWeeks}} weeks</div>
+                </div>
+            </ion-col>
+            <ion-col size="8.5">
+                <div class="info-card">
+                    <div class="title">Trainings per week</div>
+                    <div class="content">{{plan.trainingsPerWeek}} days</div>
+                </div>
+            </ion-col>
+            <ion-col size="3.5">
+                <div class="info-card">
+                    <div class="title">Intensity</div>
+                    <div class="content">
+                        <ion-icon *ngFor="let i of [].constructor(plan.intensity)"
+                                  name="flame"></ion-icon>
+                        <ion-icon *ngFor="let i of [].constructor(3 - plan.intensity)"
+                                  name="flame-outline"></ion-icon>
+                    </div>
+                </div>
+            </ion-col>
+            <ion-col size="8.5">
+                <div class="info-card">
+                    <div class="title">Focus</div>
+                    <div class="content">
+                        <div class="focus-rate">
+                        <span class="focus-rate-group">
+                            Strength &nbsp;
+                                <ion-icon *ngFor="let i of [].constructor(plan.focusRateStrength)"
+                                          name="ellipse"></ion-icon>
+                                <ion-icon *ngFor="let i of [].constructor(3 - plan.focusRateStrength)"
+                                          name="ellipse-outline"></ion-icon>
+                        </span>
+                            <span class="focus-rate-group">
+                            Cardio &nbsp;
+                                <ion-icon *ngFor="let i of [].constructor(plan.focusRateCardio)"
+                                          name="ellipse"></ion-icon>
+                                <ion-icon *ngFor="let i of [].constructor(3 - plan.focusRateCardio)"
+                                          name="ellipse-outline"></ion-icon>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <div class="center">
+        <div class="info-title">Equipment</div>
+        <div class="info-content">{{plan.equipment}}</div>
+
+        <div class="info-title">Goal</div>
+        <div class="info-content">{{plan.goal}}</div>
+
+        <div class="info-title">How to Reach It</div>
+        <div class="info-content">{{plan.howToReach}}</div>
+
+        <div class="info-title">Structure of a Week</div>
+    </div>
+    <ion-list lines="none">
+        <ion-card *ngFor="let day of plan.weekStructure; let i = index">
+            <ion-item>
+                <div class="first-part">
+                    <div class="day-number">Day {{i + 1}}</div>
+                    <div class="day-type">{{day.type}}</div>
+                </div>
+                <span class="vertical-line"></span>
+                <div class="second-part">
+                    {{day.description}}
+                </div>
+            </ion-item>
+            <ion-ripple-effect></ion-ripple-effect>
+        </ion-card>
+    </ion-list>
+</ion-content>
+<ion-footer class="footer-button ion-no-border">
+    <div>
+        <ion-button *ngIf="!isMyPlan" (click)="startPlan()" class="yellow">Start Plan</ion-button>
+        <ion-button *ngIf="isMyPlan" (click)="leavePlan()" class="dark-white">Leave Plan</ion-button>
+    </div>
+</ion-footer>

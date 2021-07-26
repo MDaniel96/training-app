@@ -54,40 +54,6 @@ ion-grid {
 
     ion-col {
       padding: 5px;
-
-      div.card {
-        background-color: var(--workout-info-card-background);
-        border-radius: var(--border-radius-10);
-        padding: 10px;
-        text-align: center;
-        height: 60px;
-
-        .title {
-          font-weight: var(--font-weight-bold);
-          font-size: 13px;
-          color: var(--list-header-color);
-          letter-spacing: 0.1px;
-          padding-bottom: 7px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-
-        .content {
-          font-size: 13px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-
-        .title.custom {
-          font-size: 15px;
-        }
-
-        .content.custom {
-          font-size: 15px;
-        }
-      }
     }
   }
 }
