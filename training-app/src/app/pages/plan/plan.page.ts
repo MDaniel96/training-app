@@ -24,7 +24,7 @@ export class PlanPage implements AfterViewInit {
 
     selectPlanGroup(group: PlanGroup) {
         const navigationState = {planGroup: group};
-        this.nav.navigateForward('tabs/plans/plan-group',
+        this.nav.navigateForward('/plan-group',
             this.isIos() ? {state: navigationState} : {state: navigationState, animation: pageSlideAnimation}
         );
     }

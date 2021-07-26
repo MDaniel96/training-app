@@ -22,15 +22,16 @@ div.center {
   text-align: center;
   padding: 0 12px;
   margin-top: 10px;
-  font-size: 14px;
 
   .info-title {
+    font-size: 15px;
     color: var(--list-header-color);
     font-weight: var(--font-weight-bold);
     margin-bottom: 6px;
   }
 
   .info-content {
+    font-size: 14.5px;
     margin-bottom: 22px;
     line-height: 22px;
   }
@@ -40,7 +41,7 @@ ion-list {
   background-color: transparent;
 
   ion-card {
-    margin-bottom: 11px;
+    margin: 0 0 11px 0;
 
     ion-item {
       padding: 13px;

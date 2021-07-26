@@ -118,7 +118,7 @@ ion-icon.toolbar {
 
 ion-footer.footer-button {
   text-align: center;
-  bottom: 6.5px;
+  bottom: 10px;
   border-color: transparent;
 
   ion-button {
@@ -141,6 +141,14 @@ ion-footer.footer-button {
     --background: var(--footer-button-background-color);
     --background-activated: var(--footer-button-background-activated-color);
     color: var(--footer-button-font-color);
+  }
+
+  ion-button.yellow-border {
+    --border-width: 3px;
+    --border-color: var(--trx-yellow-97);
+    --background: var(--footer-bordered-button-background-color);
+    --background-activated: var(--footer-button-background-activated-color);
+    color: var(--footer-bordered-button-font-color);
   }
 
   @media only screen and (min-width: 600px) {

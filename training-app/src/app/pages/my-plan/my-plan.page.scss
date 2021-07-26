@@ -1,5 +1,13 @@
 @import "src/app/components/workout/workout-item/workout-item.component";
 
+.backdrop {
+  position: absolute;
+  top: 0;
+  background-color: var(--black-40);
+  width: 100%;
+  height: 100%;
+}
+
 .info-header {
   position: relative;
   width: 100vw;
@@ -15,14 +23,6 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .backdrop {
-      position: absolute;
-      top: 0;
-      background-color: var(--black-40);
-      width: 100%;
-      height: 100%;
     }
 
     .content {
@@ -111,5 +111,36 @@ ion-card {
       opacity: var(--plan-day-completion-icon-opacity);
       font-size: 26px;
     }
+  }
+}
+
+.no-plan-header {
+  height: 90%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  span {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: var(--font-weight-medium);
+    color: white;
+  }
+
+  .backdrop {
+    background-image: var(--no-plan-img-linear-color);
+  }
+}
+
+.footer-button {
+  ion-button {
+    margin-bottom: 20px;
   }
 }

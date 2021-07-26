@@ -56,10 +56,13 @@
   --input-focused-border-color: var(--trx-black-90);
 
   --footer-button-background-color: var(--trx-black-97);
-  --footer-button-background-activated-color: var(--trx-black-90);
+  --footer-button-background-activated-color: var(--trx-black-8);
   --footer-button-font-color: white;
+  --footer-bordered-button-font-color: black;
+  --footer-bordered-button-background-color: var(--trx-black-8);
 
   --app-title-linear-color: var(--black-linear);
+  --no-plan-img-linear-color: var(--white-linear);
 
   --side-modal-background-color: var(--white-93);
 
@@ -124,10 +127,13 @@ body.dark {
   --input-focused-border-color: var(--white-95);
 
   --footer-button-background-color: var(--dark-white-97);
-  --footer-button-background-activated-color: var(--white-60);
+  --footer-button-background-activated-color: var(--white-8);
   --footer-button-font-color: black;
+  --footer-bordered-button-font-color: white;
+  --footer-bordered-button-background-color: var(--white-8);
 
   --app-title-linear-color: var(--trx-yellow-linear);
+  --no-plan-img-linear-color: var(--trx-black-linear);
 
   --side-modal-background-color: var(--trx-black-95);
 

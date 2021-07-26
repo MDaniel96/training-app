@@ -1,23 +1,25 @@
-import {Component, OnDestroy} from '@angular/core';
-import {NavController, Platform} from '@ionic/angular';
+import {Component, OnDestroy, ViewChild} from '@angular/core';
+import {NavController, Platform, ViewDidEnter} from '@ionic/angular';
 import {Plan} from '../../model/plan.model';
 import {PlanService} from '../../service/plan.service';
 import {pageSlideAnimation} from '../../animations/page-slide.animation';
 import {Workout} from '../../model/workout.model';
 import {Subscription} from 'rxjs';
+import {CircleProgressComponent} from 'ng-circle-progress';
 
 @Component({
     selector: 'app-my-plan',
     templateUrl: 'my-plan.page.html',
     styleUrls: ['my-plan.page.scss']
 })
-export class MyPlanPage implements OnDestroy {
+export class MyPlanPage implements ViewDidEnter, OnDestroy {
 
-    workouts = ['Circuit training', 'HIIT', 'Interval training', 'Circuit training', 'Muscle building'];
+    @ViewChild(CircleProgressComponent) circleProgressComponent;
 
     plan: Plan;
-
     myPlanSubscription: Subscription;
+
+    workouts = ['Circuit training', 'HIIT', 'Interval training', 'Circuit training', 'Muscle building'];
 
     constructor(private platform: Platform,
                 private nav: NavController,
@@ -164,8 +166,16 @@ export class MyPlanPage implements OnDestroy {
         );
     }
 
+    choosePlan() {
+        this.nav.navigateRoot('/tabs/plans');
+    }
+
     isIos(): boolean {
         return this.platform.is('ios');
+    }
+
+    ionViewDidEnter() {
+        this.circleProgressComponent.render();
     }
 
     ngOnDestroy() {

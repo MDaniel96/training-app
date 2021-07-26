@@ -2,14 +2,14 @@
     <ion-toolbar>
         <ion-title>AD TRAINING</ion-title>
         <ion-buttons slot="end">
-            <ion-button (click)="showPlanDetails()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
+            <ion-button *ngIf="plan" (click)="showPlanDetails()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
                 <ion-icon name="settings-outline" class="toolbar"></ion-icon>
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-    <div *ngIf="plan; else noPlanBlock">
+    <div *ngIf="plan">
         <div class="info-header">
             <div class="fixed">
                 <img [src]="'./assets/image/workouts/large/' + plan.image" alt="">
@@ -71,7 +71,13 @@
             </ion-card>
         </ion-list>
     </div>
-    <ng-template #noPlanBlock>
-        <div>No plan selected!</div>
-    </ng-template>
+    <div *ngIf="!plan" class="no-plan-header">
+        <img [src]="'./assets/image/plans/no-plan-img.png'" alt="">
+        <div class="backdrop"></div>
+        <span>You have no plan yet, build or choose one.</span>
+    </div>
 </ion-content>
+<ion-footer *ngIf="!plan" class="footer-button ion-no-border">
+    <ion-button fill="outline" class="yellow-border">Build My Plan</ion-button>
+    <ion-button fill="outline" class="yellow-border" (click)="choosePlan()">Choose Plan</ion-button>
+</ion-footer>
