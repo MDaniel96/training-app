@@ -1,26 +1,32 @@
-import {Component} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {NavController, Platform} from '@ionic/angular';
 import {Plan} from '../../model/plan.model';
 import {PlanService} from '../../service/plan.service';
 import {pageSlideAnimation} from '../../animations/page-slide.animation';
 import {Workout} from '../../model/workout.model';
+import {Subscription} from 'rxjs';
 
 @Component({
-    selector: 'app-tab1',
+    selector: 'app-my-plan',
     templateUrl: 'my-plan.page.html',
     styleUrls: ['my-plan.page.scss']
 })
-export class MyPlanPage {
+export class MyPlanPage implements OnDestroy {
+
+    workouts = ['Circuit training', 'HIIT', 'Interval training', 'Circuit training', 'Muscle building'];
+
+    plan: Plan;
+
+    myPlanSubscription: Subscription;
 
     constructor(private platform: Platform,
                 private nav: NavController,
                 private planService: PlanService) {
         this.plan = planService.myPlan;
+        this.myPlanSubscription = planService.myPlanSubject.subscribe(() => {
+            this.plan = planService.myPlan;
+        });
     }
-
-    workouts = ['Circuit training', 'HIIT', 'Interval training', 'Circuit training', 'Muscle building'];
-
-    plan: Plan;
 
     workout: Workout = {
         name: 'Day 1: Circuit Training',
@@ -151,7 +157,18 @@ export class MyPlanPage {
         );
     }
 
+    showPlanDetails() {
+        const navigationState = {plan: this.plan, isMyPlan: true};
+        this.nav.navigateForward('/plan-detail',
+            this.isIos() ? {state: navigationState} : {state: navigationState, animation: pageSlideAnimation}
+        );
+    }
+
     isIos(): boolean {
         return this.platform.is('ios');
+    }
+
+    ngOnDestroy() {
+        this.myPlanSubscription.unsubscribe();
     }
 }

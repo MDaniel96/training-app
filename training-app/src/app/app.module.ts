@@ -35,6 +35,7 @@ import {AddToWorkoutPanelComponent} from './components/panel/add-to-workout-pane
 import {PlanItemComponent} from './components/plan/plan-item/plan-item.component';
 import {NgCircleProgressModule} from 'ng-circle-progress';
 import {PlanGroupPage} from './pages/plan-group/plan-group.page';
+import {PlanDetailPage} from './pages/plan-detail/plan-detail.page';
 
 @NgModule({
     imports: [
@@ -65,6 +66,7 @@ import {PlanGroupPage} from './pages/plan-group/plan-group.page';
         MyPlanPage,
         PlanPage,
         PlanGroupPage,
+        PlanDetailPage,
         WorkoutPage,
         WorkoutDetailPage,
         WorkoutCustomEditPage,

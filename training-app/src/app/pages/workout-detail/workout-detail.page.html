@@ -30,19 +30,19 @@
     <ion-grid>
         <ion-row *ngIf="!custom">
             <ion-col size="3.5">
-                <div class="card">
+                <div class="info-card">
                     <div class="title">Duration</div>
                     <div class="content">{{workout.duration}} min</div>
                 </div>
             </ion-col>
             <ion-col size="8.5">
-                <div class="card">
+                <div class="info-card">
                     <div class="title">Muscle group</div>
                     <div class="content">{{workout.muscleGroups}}</div>
                 </div>
             </ion-col>
             <ion-col size="3.5">
-                <div class="card">
+                <div class="info-card">
                     <div class="title">Intensity</div>
                     <div class="content">
                         <ion-icon *ngFor="let i of [].constructor(workout.intensity)"
@@ -53,7 +53,7 @@
                 </div>
             </ion-col>
             <ion-col size="8.5">
-                <div class="card">
+                <div class="info-card">
                     <div class="title">Equipment</div>
                     <div class="content">{{workout.equipments}}</div>
                 </div>
@@ -61,13 +61,13 @@
         </ion-row>
         <ion-row *ngIf="custom">
             <ion-col size="6">
-                <div class="card">
+                <div class="info-card">
                     <div class="title custom">Duration</div>
                     <div class="content custom">{{workout.duration}} min</div>
                 </div>
             </ion-col>
             <ion-col size="6">
-                <div class="card">
+                <div class="info-card">
                     <div class="title custom">Exercise number</div>
                     <div class="content custom">{{workout.exercises.length}}</div>
                 </div>

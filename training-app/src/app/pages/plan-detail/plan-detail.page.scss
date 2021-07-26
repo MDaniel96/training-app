@@ -1,0 +1,80 @@
+@import "src/app/pages/workout-detail/workout-detail.page";
+@import "src/app/components/workout/workout-item/workout-item.component";
+
+.info-card {
+  div.focus-rate {
+    display: flex;
+
+    span.focus-rate-group {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      ion-icon {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+div.center {
+  text-align: center;
+  padding: 0 12px;
+  margin-top: 10px;
+  font-size: 14px;
+
+  .info-title {
+    color: var(--list-header-color);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 6px;
+  }
+
+  .info-content {
+    margin-bottom: 22px;
+    line-height: 22px;
+  }
+}
+
+ion-list {
+  background-color: transparent;
+
+  ion-card {
+    margin-bottom: 11px;
+
+    ion-item {
+      padding: 13px;
+      display: flex;
+
+      div.first-part {
+        flex: 3;
+
+        div.day-number {
+          font-weight: var(--font-weight-medium);
+          font-size: 12.5px;
+          color: var(--list-item-day-number-color);
+          margin-bottom: 5px;
+        }
+
+        div.day-type {
+          font-weight: var(--font-weight-bold);
+          font-size: 16px;
+        }
+      }
+
+      span.vertical-line {
+        height: 43px;
+        width: 1px;
+        margin-left: 6px;
+        margin-right: 11px;
+        background-color: var(--ion-text-color);
+      }
+
+      div.second-part {
+        flex: 5;
+        font-weight: var(--font-weight-regular);
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -199,3 +199,37 @@ ion-menu.side-panel {
 .toast {
   transform: translateY(-60px);
 }
+
+div.info-card {
+  background-color: var(--workout-info-card-background);
+  border-radius: var(--border-radius-10);
+  padding: 10px;
+  text-align: center;
+  height: 60px;
+
+  .title {
+    font-weight: var(--font-weight-bold);
+    font-size: 13px;
+    color: var(--list-header-color);
+    letter-spacing: 0.1px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .content {
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  span.custom {
+    font-size: 15px;
+  }
+
+  div.custom {
+    font-size: 15px;
+  }
+}

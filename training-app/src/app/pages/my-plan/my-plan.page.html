@@ -2,71 +2,76 @@
     <ion-toolbar>
         <ion-title>AD TRAINING</ion-title>
         <ion-buttons slot="end">
-            <ion-button [ngClass]="isIos() ? 'no-ripple-button' : ''">
+            <ion-button (click)="showPlanDetails()" [ngClass]="isIos() ? 'no-ripple-button' : ''">
                 <ion-icon name="settings-outline" class="toolbar"></ion-icon>
             </ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-    <div class="info-header">
-        <div class="fixed">
-            <img [src]="'./assets/image/workouts/large/' + plan.image" alt="">
-            <div class="backdrop"></div>
-            <div class="content">
-                <div class="side-info">
-                    <div>3</div>
-                    <div>weeks</div>
-                    <div>of {{ plan.numberOfWeeks }}</div>
-                </div>
-                <div class="circle-progress">
-                    <circle-progress
-                            [percent]="40"
-                            [radius]="59"
-                            [outerStrokeWidth]="4"
-                            [innerStrokeWidth]="2"
-                            [outerStrokeColor]="'#FFE41F'"
-                            [innerStrokeColor]="'#FFFFFF66'"
-                            [backgroundColor]="'#FFFFFF'"
-                            [backgroundOpacity]="0.14"
-                            [backgroundPadding]="0"
-                            [animationDuration]="800"
-                            [space]="-3"
-                            [title]="'16 / 40'"
-                            [titleColor]="'#FFFFFF'"
-                            [titleFontSize]="'24'"
-                            [titleFontWeight]="'500'"
-                            [showUnits]="false"
-                            [subtitle]="'Workouts'"
-                            [subtitleColor]="'#FFFFFF'"
-                            [subtitleFontSize]="'14'"
-                            [subtitleFontWeight]="'400'"
-                            [renderOnClick]="false"
-                    ></circle-progress>
-                </div>
-                <div class="side-info">
-                    <div>324</div>
-                    <div>minutes</div>
-                    <div>trained</div>
+    <div *ngIf="plan; else noPlanBlock">
+        <div class="info-header">
+            <div class="fixed">
+                <img [src]="'./assets/image/workouts/large/' + plan.image" alt="">
+                <div class="backdrop"></div>
+                <div class="content">
+                    <div class="side-info">
+                        <div>3</div>
+                        <div>weeks</div>
+                        <div>of {{ plan.numberOfWeeks }}</div>
+                    </div>
+                    <div class="circle-progress">
+                        <circle-progress
+                                [percent]="40"
+                                [radius]="59"
+                                [outerStrokeWidth]="4"
+                                [innerStrokeWidth]="2"
+                                [outerStrokeColor]="'#FFE41F'"
+                                [innerStrokeColor]="'#FFFFFF66'"
+                                [backgroundColor]="'#FFFFFF'"
+                                [backgroundOpacity]="0.14"
+                                [backgroundPadding]="0"
+                                [animationDuration]="800"
+                                [space]="-3"
+                                [title]="'16 / 40'"
+                                [titleColor]="'#FFFFFF'"
+                                [titleFontSize]="'24'"
+                                [titleFontWeight]="'500'"
+                                [showUnits]="false"
+                                [subtitle]="'Workouts'"
+                                [subtitleColor]="'#FFFFFF'"
+                                [subtitleFontSize]="'14'"
+                                [subtitleFontWeight]="'400'"
+                                [renderOnClick]="false"
+                        ></circle-progress>
+                    </div>
+                    <div class="side-info">
+                        <div>324</div>
+                        <div>minutes</div>
+                        <div>trained</div>
+                    </div>
                 </div>
             </div>
         </div>
+        <ion-list lines="none">
+            <ion-card *ngFor="let workout of workouts; let i = index" (click)="selectWorkout()"
+                      class="ion-activatable ripple-parent" [ngClass]="isIos() ? 'no-ripple' : ''">
+                <ion-item>
+                    <div slot="start">
+                        <span>Day</span>
+                        <span>{{i + 1}}</span>
+                    </div>
+                    <ion-label>
+                        <span>36 min</span>
+                        <span>{{workout}}</span>
+                    </ion-label>
+                    <ion-icon *ngIf="i < 3" slot="end" name="checkmark-circle-sharp" class="toolbar"></ion-icon>
+                </ion-item>
+                <ion-ripple-effect></ion-ripple-effect>
+            </ion-card>
+        </ion-list>
     </div>
-    <ion-list lines="none">
-        <ion-card *ngFor="let workout of workouts; let i = index" (click)="selectWorkout()"
-                  class="ion-activatable ripple-parent" [ngClass]="isIos() ? 'no-ripple' : ''">
-            <ion-item>
-                <div slot="start">
-                    <span>Day</span>
-                    <span>{{i + 1}}</span>
-                </div>
-                <ion-label>
-                    <span>36 min</span>
-                    <span>{{workout}}</span>
-                </ion-label>
-                <ion-icon *ngIf="i < 3" slot="end" name="checkmark-circle-sharp" class="toolbar"></ion-icon>
-            </ion-item>
-            <ion-ripple-effect></ion-ripple-effect>
-        </ion-card>
-    </ion-list>
+    <ng-template #noPlanBlock>
+        <div>No plan selected!</div>
+    </ng-template>
 </ion-content>

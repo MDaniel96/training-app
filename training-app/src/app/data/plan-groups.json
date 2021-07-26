@@ -7,13 +7,49 @@
         "name": "Six Pack Abs For Summer",
         "image": "workout-img-4.png",
         "numberOfWeeks": 8,
-        "intensity": 2
+        "trainingsPerWeek": 3,
+        "intensity": 2,
+        "focusRateCardio": 1,
+        "focusRateStrength": 3,
+        "equipment": "Open space, med-ball",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-5.png",
         "numberOfWeeks": 10,
-        "intensity": 3
+        "trainingsPerWeek": 2,
+        "intensity": 3,
+        "focusRateCardio": 2,
+        "focusRateStrength": 2,
+        "equipment": "TRX",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       }
     ]
   },
@@ -25,25 +61,121 @@
         "name": "Perfect Full Body For Beginners",
         "image": "workout-img-1.png",
         "numberOfWeeks": 6,
-        "intensity": 1
+        "trainingsPerWeek": 4,
+        "intensity": 1,
+        "focusRateCardio": 1,
+        "focusRateStrength": 2,
+        "equipment": "Dumbbell, med ball",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       },
       {
         "name": "Advanced Home Plan",
         "image": "workout-img-2.png",
         "numberOfWeeks": 8,
-        "intensity": 2
+        "trainingsPerWeek": 5,
+        "intensity": 2,
+        "focusRateCardio": 2,
+        "focusRateStrength": 3,
+        "equipment": "Open space, med-ball, stretch-band",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-3.png",
         "numberOfWeeks": 8,
-        "intensity": 2
+        "trainingsPerWeek": 4,
+        "intensity": 1,
+        "focusRateCardio": 2,
+        "focusRateStrength": 1,
+        "equipment": "Open space, TRX",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-4.png",
         "numberOfWeeks": 10,
-        "intensity": 3
+        "trainingsPerWeek": 3,
+        "intensity": 3,
+        "focusRateCardio": 3,
+        "focusRateStrength": 3,
+        "equipment": "Open space, med-ball",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       }
     ]
   },
@@ -55,19 +187,83 @@
         "name": "Runners Routine",
         "image": "workout-img-6.png",
         "numberOfWeeks": 8,
-        "intensity": 2
+        "trainingsPerWeek": 4,
+        "intensity": 3,
+        "focusRateCardio": 3,
+        "focusRateStrength": 1,
+        "equipment": "Open space, med-ball",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       },
       {
         "name": "Get Fit In 4 Weeks",
         "image": "workout-img-5.png",
         "numberOfWeeks": 4,
-        "intensity": 1
+        "trainingsPerWeek": 3,
+        "intensity": 3,
+        "focusRateCardio": 2,
+        "focusRateStrength": 3,
+        "equipment": "Open space, med-ball",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       },
       {
         "name": "Best Exercises With TRX",
         "image": "workout-img-4.png",
         "numberOfWeeks": 8,
-        "intensity": 2
+        "trainingsPerWeek": 3,
+        "intensity": 2,
+        "focusRateCardio": 1,
+        "focusRateStrength": 3,
+        "equipment": "Open space, med-ball, TRX",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       }
     ]
   },
@@ -79,7 +275,35 @@
         "name": "Gain Muscle",
         "image": "workout-img-2.png",
         "numberOfWeeks": 8,
-        "intensity": 2
+        "trainingsPerWeek": 5,
+        "intensity": 3,
+        "focusRateCardio": 1,
+        "focusRateStrength": 3,
+        "equipment": "Full gym equipment",
+        "goal": "Getting into training, or simply maintaining fitness.",
+        "howToReach": "A balanced mix of strength, endurance and mobility workouts, mostly 15 to 30 min each. Nothing too advanced, just the right amount of challenge to get fit.",
+        "weekStructure": [
+          {
+            "type": "Circuit training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "Interval training",
+            "description": "Getting into shape, or simply maintaining fitness."
+          },
+          {
+            "type": "HIIT",
+            "description": "Getting into shape, or simply maintaining fitness."
+          }
+        ]
       }
     ]
   }
